@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/size30"
+    android:paddingRight="@dimen/size30">
+
+    <RelativeLayout
+        android:id="@+id/item_order_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/size26"
+        android:paddingTop="@dimen/size26">
+
+        <ImageView
+            android:id="@+id/item_order_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/drug" />
+
+        <TextView
+            android:id="@+id/item_order_company_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toRightOf="@+id/item_order_icon_iv"
+            android:text="大连益邦药业有限公司"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/item_order_payState_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="待支付"
+            android:textColor="@color/color_FF7715"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/item_order_xrv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/item_order_class_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_FAFAFA"
+        android:paddingBottom="@dimen/size30"
+        android:paddingTop="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_order_classNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共 3 种"
+            android:textColor="@color/color_808080"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:layout_width="@dimen/size160"
+            android:layout_height="@dimen/size56"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_red_drawable"
+            android:gravity="center"
+            android:text="@string/item_order"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/txt14" />
+    </RelativeLayout>
+</LinearLayout>

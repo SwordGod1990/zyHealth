@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_confirmPurchase_rl"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size100"
+    android:background="@drawable/rectangle_btn">
+
+    <ImageView
+        android:id="@+id/view_confirmPurchase_cancel_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size34"
+        android:src="@drawable/cancel"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/view_confirmPurchase_cancel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_toRightOf="@+id/view_confirmPurchase_cancel_iv"
+        android:text="@string/confirmPurchase_state_cancel"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/txt18"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/view_confirmPurchase_reject_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size34"
+        android:src="@drawable/reject" />
+
+    <TextView
+        android:id="@+id/view_confirmPurchase_reject_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_toRightOf="@+id/view_confirmPurchase_reject_iv"
+        android:text="@string/confirmPurchase_state_cancel"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/txt18" />
+</RelativeLayout>

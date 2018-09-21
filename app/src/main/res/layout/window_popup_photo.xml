@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--头像弹窗-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_transparent">
+
+    <LinearLayout
+        android:id="@+id/id_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/window_circlePhoto_beatPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:background="@drawable/dialog_bg_white"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/color_333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size0.5"
+            android:background="@color/color_999" />
+
+        <Button
+            android:id="@+id/window_circlePhoto_selectPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:background="@color/color_ccc"
+            android:gravity="center"
+            android:text="从相册中选择"
+            android:textColor="@color/color_333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size0.5"
+            android:background="@color/color_999" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size0.5"
+            android:layout_marginTop="@dimen/size10"
+            android:background="@color/color_999" />
+
+        <Button
+            android:id="@+id/window_circlePhoto_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50"
+            android:background="@color/color_ccc"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_333" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:background="@color/color_999" />
+    </LinearLayout>
+</RelativeLayout>

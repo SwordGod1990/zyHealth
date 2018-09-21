@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/size112"
+    android:background="@color/color_banTransparent">
+
+    <LinearLayout
+        android:id="@+id/window_fullGift_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size100"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/window_fullGift_title"
+                android:textColor="@color/color_1A1A1A"
+                android:textSize="@dimen/txt18" />
+
+            <ImageView
+                android:id="@+id/window_fullGift_close_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:paddingRight="@dimen/size30"
+                android:src="@drawable/close" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size1"
+            android:background="@color/color_E5E5E5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size100"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30"
+            android:text="阿莫西林胶囊阿莫西林胶囊阿莫西林胶囊阿莫西林胶囊"
+            android:textColor="@color/color_1A1A1A"
+            android:textSize="@dimen/txt15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_scavengers_spec"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不详"
+                android:textColor="@color/color_2A2A2A"
+                android:textSize="@dimen/txt14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size18"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_scavengers_package"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10粒／盒"
+                android:textColor="@color/color_2A2A2A"
+                android:textSize="@dimen/txt14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size18"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_scavengers_factory"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大连药业有限公司"
+                android:textColor="@color/color_2A2A2A"
+                android:textSize="@dimen/txt14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size142"
+            android:layout_marginTop="@dimen/size18"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/item_scavengers_date"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/txt14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2年"
+                android:textColor="@color/color_2A2A2A"
+                android:textSize="@dimen/txt14" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

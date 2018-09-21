@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4">
+
+    <include layout="@layout/view_titlebar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/aty_fullGiftList_fl"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBar_ll">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/aty_fullGiftList_xrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:background="@color/color_white" />
+
+        <com.zyjk.posmall.page.LoadPage
+            android:id="@+id/mLoadPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_fullGiftList_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/view_bottom" />
+
+    </RelativeLayout>
+</RelativeLayout>

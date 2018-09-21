@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_footer_ll"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size100"
+    android:visibility="gone"
+    android:background="@color/color_white"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_height="@dimen/size100"
+        android:text="没有更多啦~" />
+</RelativeLayout>

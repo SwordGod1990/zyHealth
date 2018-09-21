@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><!--报货询价-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4">
+
+    <include layout="@layout/view_titlebar" />
+
+    <com.zyjk.posmall.view.MyScrollview
+        android:id="@+id/goodsEnquiry_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar_ll"
+        android:divider="#00000000"
+        android:dividerHeight="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/goodsEnquiry_address_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/view_address" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/goodsEnquiry_default_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size252"
+                android:layout_below="@+id/goodsEnquiry_address_rl"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_marginRight="@dimen/size20"
+                android:layout_marginTop="@dimen/size20"
+                android:background="@drawable/white_bg"
+                android:src="@drawable/rectangle"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/goodsEnquiry_discount_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goodsEnquiry_default_iv"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size20"
+                android:paddingRight="@dimen/size20">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size40"
+                    android:paddingLeft="@dimen/size20"
+                    android:layout_marginBottom="@dimen/size22"
+                    android:paddingRight="@dimen/size20">
+
+                    <TextView
+                        android:id="@+id/goodsEnquiry_discount_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/aty_home_discount"
+                        android:textColor="@color/color_FF6C07"
+                        android:textSize="@dimen/txt18" />
+
+                    <RelativeLayout
+                        android:id="@+id/goodsEnquiry_discountMore_rl"
+                        android:layout_width="@dimen/size300"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/goodsEnquiry_discountMore_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/size6"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/goodsEnquiry_discountMore_iv"
+                            android:text="@string/more"
+                            android:textColor="@color/color_999"
+                            android:textSize="@dimen/txt15" />
+
+                        <ImageView
+                            android:id="@+id/goodsEnquiry_discountMore_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/discount_go" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/goodsEnquiry_discount_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_EFEFF4" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goodsEnquiry_gift_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goodsEnquiry_discount_ll"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/size20"
+                android:paddingRight="@dimen/size20"
+                android:paddingTop="@dimen/size40">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/size20"
+                    android:layout_marginBottom="@dimen/size22"
+                    android:paddingRight="@dimen/size20">
+
+                    <TextView
+                        android:id="@+id/goodsEnquiry_gift_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aty_home_gift"
+                        android:textColor="@color/color_FF5342"
+                        android:textSize="@dimen/txt18" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/size300"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/goodsEnquiry_giftMore_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/size6"
+                            android:layout_toLeftOf="@+id/goodsEnquiry_giftMore_iv"
+                            android:text="@string/more"
+                            android:textColor="@color/color_999"
+                            android:textSize="@dimen/txt15" />
+
+                        <ImageView
+                            android:id="@+id/goodsEnquiry_giftMore_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/go" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/goodsEnquiry_gift_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_EFEFF4"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.zyjk.posmall.view.MyScrollview>
+
+    <RelativeLayout
+        android:id="@+id/goodsEnquiry_order_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/size30"
+        android:visibility="gone">
+
+        <include layout="@layout/view_bottom" />
+
+    </RelativeLayout>
+</RelativeLayout>

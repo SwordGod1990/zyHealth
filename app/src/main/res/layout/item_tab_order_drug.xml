@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/size30"
+    android:paddingRight="@dimen/size30">
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size15"
+        android:layout_marginTop="@dimen/size15"
+        android:text="氨咖黄敏胶囊"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugSign_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/item_tabOrder_drugNum_tv"
+        android:text="x"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugNum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="10"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugName1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_tabOrder_drugName_tv"
+        android:text="汝立康 四季感冒片"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugSign1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_tabOrder_drugName_tv"
+        android:layout_toLeftOf="@+id/item_tabOrder_drugNum1_tv"
+        android:text="x"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+
+    <TextView
+        android:id="@+id/item_tabOrder_drugNum1_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_tabOrder_drugName_tv"
+        android:text="2"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt16" />
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?><!--药品信息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/item_drugMessage_drugName_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/size30"
+        android:paddingRight="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_drugMessage_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/item_drugMessage_drugName"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/item_drugMessage_star01_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_drugMessage_name_tv"
+            android:text="@string/money_star"
+            android:textColor="@color/color_EB3E2D" />
+
+        <TextView
+            android:id="@+id/item_drugMessage_drugName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="板蓝根颗粒"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size20"
+        android:layout_marginTop="@dimen/size32"
+        android:paddingLeft="@dimen/size30"
+        android:text="@string/item_drugMessage_drugDetails"
+        android:textColor="@color/color_666"
+        android:textSize="@dimen/txt14" />
+
+    <RelativeLayout
+        android:id="@+id/item_drugMessage_drugSpec_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:layout_marginTop="@dimen/size2"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/size30"
+        android:paddingRight="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_drugMessage_spec_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/item_drugMessage_drugSpec"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <EditText
+            android:id="@+id/item_drugMessage_drugSpec_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/item_drugMessage_hint_spec"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_drugMessage_drugPackage_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:layout_marginTop="@dimen/size2"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/size30"
+        android:paddingRight="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_drugMessage_package_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/item_drugMessage_drugPackage"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <EditText
+            android:id="@+id/item_drugMessage_drugPackage_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/item_drugMessage_hint_package"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_drugMessage_drugFactory_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:layout_marginTop="@dimen/size2"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/size30"
+        android:paddingRight="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_drugMessage_factory_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/item_drugMessage_drugFactory"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/item_drugMessage_star02_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_drugMessage_factory_tv"
+            android:text="@string/money_star"
+            android:textColor="@color/color_EB3E2D" />
+
+        <EditText
+            android:id="@+id/item_drugMessage_drugFactory_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="@string/item_drugMessage_hint_factory"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_drugMessage_num_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100"
+        android:layout_marginTop="@dimen/size22"
+        android:background="@color/color_white"
+        android:paddingLeft="@dimen/size30"
+        android:paddingRight="@dimen/size30">
+
+        <TextView
+            android:id="@+id/item_drugMessage_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/item_drugMessage_drugNum"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/item_drugMessage_drudNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_drugMessage_add_iv"
+            android:text="10"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <ImageView
+            android:id="@+id/item_drugMessage_jian_iv"
+            android:layout_width="@dimen/size56"
+            android:layout_height="@dimen/size56"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_toLeftOf="@+id/item_drugMessage_drudNum_tv"
+            android:background="@drawable/circle_car_white"
+            android:padding="@dimen/size15"
+            android:src="@drawable/jian" />
+
+        <ImageView
+            android:id="@+id/item_drugMessage_add_iv"
+            android:layout_width="@dimen/size56"
+            android:layout_height="@dimen/size56"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size20"
+            android:background="@drawable/circle_car_red"
+            android:padding="@dimen/size15"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- @去掉标题栏@-->
+    <style name="theme_notitle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">false</item>-->
+        <!--<item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_C72F20</item>
+    </style>
+    <!-- @加载@ -->
+    <style name="loadingDialogStyle" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- @拍照动画选择@ -->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_in</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/anim_pop_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <!--自带红色圆点的布局样式-->
+    <declare-styleable name="RedDotLayout">
+        <attr name="red_background" format="color" />
+        <attr name="red_radius" format="dimension" />
+        <attr name="red_text" format="string" />
+        <attr name="red_textColor" format="color" />
+        <attr name="red_location" format="integer" />
+        <attr name="red_textSize" format="dimension" />
+    </declare-styleable>
+</resources>

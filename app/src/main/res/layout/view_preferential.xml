@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_preferential_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aty_goodsEnquiry_show_iv"
+        android:paddingLeft="@dimen/size20"
+        android:paddingRight="@dimen/size20">
+
+        <TextView
+            android:id="@+id/aty_goodsEnquiry_discount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/size20"
+            android:paddingTop="@dimen/size40"
+            android:text="@string/aty_home_discount"
+            android:textColor="@color/color_FF6C07"
+            android:textSize="@dimen/txt18"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/aty_goodsEnquiry_gift_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/size20"
+            android:paddingTop="@dimen/size40"
+            android:text="@string/aty_home_gift"
+            android:textColor="@color/color_FF5342"
+            android:textSize="@dimen/txt18"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/aty_goodsEnquiry_more_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/aty_goodsEnquiry_more_iv"
+            android:paddingBottom="@dimen/size20"
+            android:paddingTop="@dimen/size40"
+            android:text="@string/more"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt15" />
+
+        <ImageView
+            android:id="@+id/aty_goodsEnquiry_more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size6"
+            android:paddingBottom="@dimen/size20"
+            android:paddingTop="@dimen/size40"
+            android:src="@drawable/go" />
+
+    </RelativeLayout>
+</LinearLayout>

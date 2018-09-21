@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size90"
+    android:id="@+id/view_address_rl"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/view_address_icon_iv"
+        android:layout_width="@dimen/size22"
+        android:layout_height="@dimen/size30"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/size30"
+        android:layout_marginRight="@dimen/size10"
+        android:src="@drawable/address" />
+
+    <TextView
+        android:id="@+id/view_address_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/view_address_icon_iv"
+        android:text="辽宁省 大连市 庄河市" />
+
+    <ImageView
+        android:id="@+id/view_address_go_iv"
+        android:layout_width="@dimen/size20"
+        android:layout_height="@dimen/size30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/size32"
+        android:src="@drawable/right" />
+</RelativeLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/size32"
+    android:paddingRight="@dimen/size32">
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size28"
+        android:text="阿莫西林胶囊"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt18" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugPrice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/size28"
+        android:text="133.60"
+        android:textColor="@color/color_EB3E2D"
+        android:textSize="@dimen/txt18" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_moneySign_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_confirmPurchase_drugPrice_tv"
+        android:layout_marginTop="@dimen/size28"
+        android:layout_toLeftOf="@+id/item_confirmPurchase_drugPrice_tv"
+        android:text="￥"
+        android:textColor="@color/color_EB3E2D"
+        android:textSize="@dimen/txt12" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugSpec_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:text="@string/item_confirmPurchase_spec"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_specContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:layout_toRightOf="@+id/item_confirmPurchase_drugSpec_tv"
+        android:text="不详"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_specNum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_confirmPurchase_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:text="30"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt14" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_specSign_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:layout_toLeftOf="@+id/item_confirmPurchase_specNum_tv"
+        android:text="X"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt14" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugPackage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugSpec_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_confirmPurchase_package"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_packageContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugSpec_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_confirmPurchase_drugPackage_tv"
+        android:text="12粒／盒"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugFactory_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugPackage_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_confirmPurchase_factory"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_factoryContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugPackage_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_confirmPurchase_drugFactory_tv"
+        android:text="朗致集团双人药业有限公司"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_drugDate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_factoryContent_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_confirmPurchase_date"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_confirmPurchase_dateContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_factoryContent_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_confirmPurchase_drugDate_tv"
+        android:text="1年"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+    <!--赠品-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_confirmPurchase_drugDate_tv">
+
+        <RelativeLayout
+            android:id="@+id/item_confirmPurchase_gift_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size24">
+
+            <TextView
+                android:id="@+id/item_confirmPurchase_giftSign_tv"
+                android:layout_width="@dimen/size72"
+                android:layout_height="@dimen/size30"
+                android:layout_centerVertical="true"
+                android:background="@drawable/public_discount_white"
+                android:gravity="center"
+                android:text="@string/item_confirmPurchase_gift"
+                android:textColor="@color/color_EB3E2D"
+                android:textSize="@dimen/txt10" />
+
+            <TextView
+                android:id="@+id/item_confirmPurchase_giftName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_toRightOf="@+id/item_confirmPurchase_giftSign_tv"
+                android:text="阿莫西林胶囊阿莫西林阿莫西林胶囊…" />
+
+            <TextView
+                android:id="@+id/item_confirmPurchase_giftX_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/item_confirmPurchase_giftNum_tv"
+                android:text="X" />
+
+            <TextView
+                android:id="@+id/item_confirmPurchase_giftNum_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="30" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftDrugSpec_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_gift_tv"
+            android:layout_marginTop="@dimen/size22"
+            android:text="@string/item_confirmPurchase_spec"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftSpecContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_gift_tv"
+            android:layout_marginTop="@dimen/size22"
+            android:layout_toRightOf="@+id/item_confirmPurchase_giftDrugSpec_tv"
+            android:text="不详"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftSpecNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/size22"
+            android:text="30"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftSpecSign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size22"
+            android:layout_toLeftOf="@+id/item_confirmPurchase_giftSpecNum_tv"
+            android:text="X"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftDrugPackage_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftDrugSpec_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:text="@string/item_confirmPurchase_package"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftPackageContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftDrugSpec_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:layout_toRightOf="@+id/item_confirmPurchase_giftDrugPackage_tv"
+            android:text="12粒／盒"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftDrugFactory_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftDrugPackage_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:text="@string/item_confirmPurchase_factory"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftFactoryContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftDrugPackage_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:layout_toRightOf="@+id/item_confirmPurchase_giftDrugFactory_tv"
+            android:text="朗致集团双人药业有限公司"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftDrugDate_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftFactoryContent_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:text="@string/item_confirmPurchase_date"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+
+        <TextView
+            android:id="@+id/item_confirmPurchase_giftDateContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_confirmPurchase_giftFactoryContent_tv"
+            android:layout_marginTop="@dimen/size16"
+            android:layout_toRightOf="@+id/item_confirmPurchase_giftDrugDate_tv"
+            android:text="1年"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt13" />
+    </RelativeLayout>
+</RelativeLayout>

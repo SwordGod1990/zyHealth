@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--登陆页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_titlebar"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/login_user_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/uesr_tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="用户名：" />
+
+            <EditText
+                android:id="@+id/uesr_et"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/uesr_tv"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_psw_ll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/login_user_ll">
+
+            <TextView
+                android:id="@+id/psw_tv"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="密     码：" />
+
+            <EditText
+                android:id="@+id/psw_et"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@+id/psw_tv"
+                android:background="@null" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_jump_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/titleBar_ll"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="跳转"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+</LinearLayout>

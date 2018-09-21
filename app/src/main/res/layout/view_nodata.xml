@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--无数据-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_nodata_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_no_data_img" />
+
+    <TextView
+        android:id="@+id/noData_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noData_no_data" />
+</LinearLayout>

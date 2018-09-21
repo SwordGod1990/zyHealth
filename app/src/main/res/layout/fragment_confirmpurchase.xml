@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4">
+
+    <include layout="@layout/view_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBar_ll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_addressMsg_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_confirmPurchase_rl"
+                android:background="@color/color_white"
+                android:paddingBottom="@dimen/size30"
+                android:paddingTop="@dimen/size30">
+
+                <ImageView
+                    android:id="@+id/frg_confirmPurchase_addressIcon_iv"
+                    android:layout_width="@dimen/size26"
+                    android:layout_height="@dimen/size36"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size36"
+                    android:layout_marginRight="@dimen/size20"
+                    android:src="@drawable/address" />
+
+                <RelativeLayout
+                    android:id="@+id/frg_confirmPurchase_msg_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_addressIcon_iv">
+
+                    <TextView
+                        android:id="@+id/frg_confirmPurchase_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="驴得水"
+                        android:textColor="@color/color_333"
+                        android:textSize="@dimen/txt16" />
+
+                    <TextView
+                        android:id="@+id/frg_confirmPurchase_phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/size20"
+                        android:layout_toRightOf="@+id/frg_confirmPurchase_name_tv"
+                        android:text="15647448007"
+                        android:textColor="@color/color_4A90E2"
+                        android:textSize="@dimen/txt16" />
+
+                    <ImageView
+                        android:id="@+id/frg_confirmPurchase_modifyAddress_iv"
+                        android:layout_width="@dimen/size32"
+                        android:layout_height="@dimen/size32"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size30"
+                        android:src="@drawable/modify" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frg_confirmPurchase_msg_rl"
+                    android:layout_marginTop="@dimen/size22"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_addressIcon_iv"
+                    android:text="收货地址："
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/txt14" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_addressContent_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frg_confirmPurchase_msg_rl"
+                    android:layout_marginTop="@dimen/size22"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_address_tv"
+                    android:text="北京丰台区首经贸万年花城3期6号楼"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/txt14" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/frg_confirmPurchase_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size2"
+                android:layout_below="@+id/frg_confirmPurchase_addressMsg_rl"
+                android:layout_marginLeft="@dimen/size30"
+                android:background="@color/color_E5E5E5" />
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_stayMessage_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frg_confirmPurchase_line"
+                android:background="@color/color_white"
+                android:paddingBottom="@dimen/size32"
+                android:paddingRight="@dimen/size32"
+                android:paddingTop="@dimen/size32">
+
+                <ImageView
+                    android:id="@+id/frg_confirmPurchase_msgIcon_iv"
+                    android:layout_width="@dimen/size32"
+                    android:layout_height="@dimen/size30"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size32"
+                    android:src="@drawable/staymessage" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_stayMessage_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size18"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_msgIcon_iv"
+                    android:text="@string/confirmPurchase_stayMessage"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/txt14" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_stayMessage_name_tv"
+                    android:background="@null"
+                    android:hint="@string/confirmPurchase_editMsg"
+                    android:textColor="@color/color_B3B3B3"
+                    android:textSize="@dimen/txt14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_payWay_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size92"
+                android:layout_below="@+id/frg_confirmPurchase_stayMessage_rl"
+                android:layout_marginTop="@dimen/size20"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/size32">
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_payWay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirmPurchase_payWay"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/txt15" />
+
+                <ImageView
+                    android:id="@+id/frg_confirmPurchase_payWay_iv"
+                    android:layout_width="@dimen/size20"
+                    android:layout_height="@dimen/size34"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size30"
+                    android:src="@drawable/right" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_wxPay_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_toLeftOf="@+id/frg_confirmPurchase_payWay_iv"
+                    android:text="微信支付"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/txt15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_companyMsg_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size128"
+                android:layout_below="@+id/frg_confirmPurchase_payWay_rl"
+                android:layout_marginTop="@dimen/size20"
+                android:background="@color/color_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/size32">
+
+
+                <RelativeLayout
+                    android:id="@+id/frg_confirmPurchase_company_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/frg_confirmPurchase_companyIcon_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/size10"
+                        android:src="@drawable/drug" />
+
+                    <TextView
+                        android:id="@+id/frg_confirmPurchase_companyName_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/frg_confirmPurchase_companyIcon_iv"
+                        android:text="朗致药业有限公朗致药业有限公司"
+                        android:textColor="@color/color_333"
+                        android:textSize="@dimen/txt15" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_userName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frg_confirmPurchase_company_rl"
+                    android:layout_marginLeft="@dimen/size30"
+                    android:layout_marginTop="@dimen/size16"
+                    android:text="黎明"
+                    android:textColor="@color/color_666"
+                    android:textSize="@dimen/txt15" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_userPhone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frg_confirmPurchase_company_rl"
+                    android:layout_marginLeft="@dimen/size30"
+                    android:layout_marginTop="@dimen/size16"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_userName_tv"
+                    android:text="13843567890"
+                    android:textColor="@color/color_666"
+                    android:textSize="@dimen/txt15" />
+            </RelativeLayout>
+
+            <com.jcodecraeer.xrecyclerview.XRecyclerView
+                android:id="@+id/frg_confirmPurchase_xrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frg_confirmPurchase_companyMsg_rl"
+                android:background="@color/color_F9F9F9"
+                android:paddingLeft="@dimen/size32"
+                android:paddingRight="@dimen/size32" />
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_freight_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size84"
+                android:layout_below="@+id/frg_confirmPurchase_xrv"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/size32"
+                android:paddingRight="@dimen/size32">
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_freightName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirmPurchase_freight"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/txt15" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_freightUnit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirmPurchase_unit"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/txt15" />
+
+                <EditText
+                    android:id="@+id/frg_confirmPurchase_freightPrice_et"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_toLeftOf="@+id/frg_confirmPurchase_freightUnit_tv"
+                    android:background="@color/color_white"
+                    android:gravity="right"
+                    android:hint="@string/confirmPurchase_freight_et"
+                    android:textColor="@color/color_B3B3B3"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/txt15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_order_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size92"
+                android:layout_below="@+id/frg_confirmPurchase_freight_rl"
+                android:layout_marginTop="@dimen/size10"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/size32"
+                android:paddingRight="@dimen/size32">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirmPurchase_orderPrice"
+                    android:textColor="@color/color_333"
+                    android:textSize="@dimen/txt15" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_orderPrice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="3000.00"
+                    android:textColor="@color/color_EB3E2D"
+                    android:textSize="@dimen/txt18" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_orderSign_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/frg_confirmPurchase_orderPrice_tv"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/frg_confirmPurchase_orderPrice_tv"
+                    android:text="￥"
+                    android:textColor="@color/color_EB3E2D"
+                    android:textSize="@dimen/txt12" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/frg_confirmPurchase_money_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size98"
+                android:layout_below="@+id/frg_confirmPurchase_order_rl"
+                android:layout_marginTop="@dimen/size18"
+                android:background="@color/color_white"
+                android:paddingLeft="@dimen/size32">
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_money_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/frg_confirmPurchase_moneySign_tv"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirmPurchase_orderMoney"
+                    android:textColor="@color/color_666"
+                    android:textSize="@dimen/txt15" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_moneySign_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/frg_confirmPurchase_moneyPrice_tv"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_money_tv"
+                    android:text="￥"
+                    android:textColor="@color/color_EB3E2D"
+                    android:textSize="@dimen/txt15" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_moneyPrice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/frg_confirmPurchase_moneySign_tv"
+                    android:text="2000.00"
+                    android:textColor="@color/color_EB3E2D"
+                    android:textSize="@dimen/txt20" />
+
+                <TextView
+                    android:id="@+id/frg_confirmPurchase_tv"
+                    android:layout_width="@dimen/size256"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/rectangle_btn"
+                    android:gravity="center"
+                    android:text="@string/confirmPurchase"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/txt18" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
