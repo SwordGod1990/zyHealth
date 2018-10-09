@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.google.zxing.activity.CaptureActivity;
 import com.google.zxing.qrConstant;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -25,26 +25,31 @@ import butterknife.OnClick;
  * 扫描
  */
 
-public class ScanningActivity extends BaseActivity {
+public class ScanningActivity extends BasePageActivity {
 
 
     @BindView(R.id.activity_scanning_result_tv)
     TextView activity_scanning_result_tv;
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_scanning;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("扫描");
+        TitleSet();
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -53,15 +58,14 @@ public class ScanningActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.activity_scanning_btn, R.id.titleBar_left_iv})
+    @OnClick({R.id.activity_scanning_btn})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
             case R.id.activity_scanning_btn:
                 startQrCode();
                 break;
-            case R.id.titleBar_left_iv:
-                finish();
+            default:
                 break;
         }
     }

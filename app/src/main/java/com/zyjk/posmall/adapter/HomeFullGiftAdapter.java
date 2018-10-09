@@ -1,21 +1,19 @@
 package com.zyjk.posmall.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.View;
 
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.base.CommonFragmentActivity;
-import com.zyjk.posmall.utils.CommonUtils;
-import com.zyjk.posmall.utils.ToastUtil;
+import com.zyjk.posmall.tools.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/9/11.
+ * Created by Sword God on 2018/9/11.
  * 首页（满赠）
  */
 

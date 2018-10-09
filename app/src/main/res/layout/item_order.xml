@@ -65,7 +65,7 @@
             android:layout_width="@dimen/size160"
             android:layout_height="@dimen/size56"
             android:layout_alignParentRight="true"
-            android:background="@drawable/button_red_drawable"
+            android:background="@drawable/red_btn_refund"
             android:gravity="center"
             android:text="@string/item_order"
             android:textColor="@color/color_white"

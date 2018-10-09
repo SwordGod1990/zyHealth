@@ -8,18 +8,26 @@ import android.view.View;
 
 import com.zyjk.posmall.MyApplication;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
 import com.zyjk.posmall.ui.fragment.TabHomeFragment;
 import com.zyjk.posmall.ui.fragment.TabOrderFragment;
 import com.zyjk.posmall.ui.fragment.TabUserFragment;
-import com.zyjk.posmall.utils.CommonUtils;
-import com.zyjk.posmall.utils.SpUtil;
-import com.zyjk.posmall.utils.ToastUtil;
+import com.zyjk.posmall.tools.CommonUtils;
+import com.zyjk.posmall.tools.SpUtil;
+import com.zyjk.posmall.tools.ToastUtil;
 import com.zyjk.posmall.view.BottomBar;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+/**
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2514:59
+ * desc   : 主页
+ * version: 1.0
+ */
+
+public class MainActivity extends BasePageActivity {
 
     // 定义一个变量，来标识是否退出
     private static boolean isExit = false;
@@ -28,7 +36,7 @@ public class MainActivity extends BaseActivity {
     BottomBar bottom_bar;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_main;
     }
 
@@ -39,8 +47,8 @@ public class MainActivity extends BaseActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
-    public void initListener() {
-        bottom_bar.setContainer(R.id.fl_container).setTitleBeforeAndAfterColor("#333333", "#EB3E2D")
+    public void registerListener() {
+        bottom_bar.setContainer(R.id.container_fl).setTitleBeforeAndAfterColor("#333333", "#EB3E2D")
                 .addItem(TabHomeFragment.class, "我要采购", R.drawable.purchase, R.drawable.purchase_select)
                 .addItem(TabOrderFragment.class, "订单", R.drawable.order, R.drawable.order_select)
                 .addItem(TabUserFragment.class, "我的", R.drawable.item3_before, R.drawable.item3_after).build();
@@ -52,7 +60,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
 
     }
 

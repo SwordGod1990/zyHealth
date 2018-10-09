@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?><!--扫码购药-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="" />
 
     <com.jcodecraeer.xrecyclerview.XRecyclerView
         android:id="@+id/frg_scavengers_XRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleBar_ll" />
+        android:layout_below="@+id/mTitleBar" />
 </RelativeLayout>

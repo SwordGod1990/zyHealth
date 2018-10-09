@@ -17,17 +17,22 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.bumptech.glide.Glide;
 import com.lljjcoder.citypickerview.widget.CityPicker;
+import com.orhanobut.logger.Logger;
+import com.stx.xhb.xbanner.XBanner;
+import com.stx.xhb.xbanner.transformers.Transformer;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.ui.activity.DiscountListActivity;
-import com.zyjk.posmall.ui.activity.FullGiftListActivity;
 import com.zyjk.posmall.adapter.HomeDiscountAdapter;
 import com.zyjk.posmall.adapter.HomeFullGiftAdapter;
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
+import com.zyjk.posmall.ui.activity.DiscountListActivity;
+import com.zyjk.posmall.ui.activity.PresentListActivity;
+import com.zyjk.posmall.tools.CommonUtils;
+import com.zyjk.posmall.tools.ToastUtil;
+import com.zyjk.posmall.view.TitleBar;
 import com.zyjk.posmall.window.GridSpacingItemDecoration;
-import com.zyjk.posmall.utils.CommonUtils;
-import com.zyjk.posmall.utils.ToastUtil;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -37,7 +42,7 @@ import butterknife.OnClick;
  * 我要采购
  */
 
-public class TabHomeFragment extends BaseFragment {
+public class TabHomeFragment extends BasePageFragment {
 
     private CityPicker mCP;       // 城市选择
     private ArrayList<String> list;
@@ -46,11 +51,8 @@ public class TabHomeFragment extends BaseFragment {
     int spacing = 10; // 50px
     boolean includeEdge = false;
     private String province;
+    List<String> imgesUrl = new ArrayList<>();
 
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
-    @BindView(R.id.titleBar_left_iv)
-    ImageView titleBar_left_iv;
     @BindView(R.id.goodsEnquiry_default_iv)
     ImageView mDefault_iv;
     @BindView(R.id.view_address_name_tv)
@@ -59,17 +61,21 @@ public class TabHomeFragment extends BaseFragment {
     RecyclerView mDiscount_rv;
     @BindView(R.id.goodsEnquiry_gift_rv)
     RecyclerView mGift_rv;
+    @BindView(R.id.goodsEnquiry_mXBanner)
+    XBanner mXBanner;
+    @BindView(R.id.mTitleBar)
+    TitleBar mTitleBar;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.tab_fragment_goodsenquiry;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("我要采购");
-        titleBar_left_iv.setVisibility(View.GONE);
+        TitleSet();
         BaiduLocation();//定位
+        BannerData();
         initData();
         mDiscount_rv.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
         mGift_rv.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
@@ -83,22 +89,8 @@ public class TabHomeFragment extends BaseFragment {
         layoutManager.setOrientation(OrientationHelper.VERTICAL);
     }
 
-    /**
-     * 百度定位初始化
-     */
-    private void BaiduLocation() {
-        MyLocationListener myListener = new MyLocationListener();
-        mLocationClient = new LocationClient(getContext());
-        LocationClientOption option = new LocationClientOption();
-        option.setIsNeedAddress(true);
-        option.setAddrType("all");
-        mLocationClient.setLocOption(option);
-        mLocationClient.registerLocationListener(myListener);
-        mLocationClient.start();
-    }
-
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -110,7 +102,7 @@ public class TabHomeFragment extends BaseFragment {
         for (int i = 0; i < 10; i++) {
             list.add("第" + i + "个");
         }
-        Log.i("TAG", "initData: " + list);
+        Logger.d(list);
         //设置折扣Adapter
         HomeDiscountAdapter discountAdapter = new HomeDiscountAdapter(getContext(), R.layout.item_goodsenquiry_discount, list);
         mDiscount_rv.setAdapter(discountAdapter);
@@ -121,7 +113,7 @@ public class TabHomeFragment extends BaseFragment {
 
     @OnClick({R.id.goodsEnquiry_address_rl, R.id.goodsEnquiry_giftMore_tv, R.id.goodsEnquiry_discountMore_tv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
             case R.id.goodsEnquiry_address_rl:
                 //地区选择
@@ -134,13 +126,75 @@ public class TabHomeFragment extends BaseFragment {
                 break;
             case R.id.goodsEnquiry_giftMore_tv:
                 //满赠优惠
-                CommonUtils.startAct(getActivity(), FullGiftListActivity.class);
+                CommonUtils.startAct(getActivity(), PresentListActivity.class);
                 break;
             case R.id.goodsEnquiry_discountMore_tv:
                 //折扣优惠
                 CommonUtils.startAct(getActivity(), DiscountListActivity.class);
                 break;
         }
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
+    }
+
+    /**
+     * 百度定位
+     */
+    private void BaiduLocation() {
+        MyLocationListener myListener = new MyLocationListener();
+        mLocationClient = new LocationClient(getContext());
+        LocationClientOption option = new LocationClientOption();
+        option.setIsNeedAddress(true);
+        option.setAddrType("all");
+        mLocationClient.setLocOption(option);
+        mLocationClient.registerLocationListener(myListener);
+    }
+
+    /**
+     * 轮播
+     */
+    private void BannerData() {
+        imgesUrl.add("http://imageprocess.yitos.net/images/public/20160906/1291473163104906.jpg");
+        imgesUrl.add("http://imageprocess.yitos.net/images/public/20160910/99381473502384338.jpg");
+        imgesUrl.add("http://imageprocess.yitos.net/images/public/20160910/77991473496077677.jpg");
+        imgesUrl.add("http://imageprocess.yitos.net/images/public/20160906/1291473163104906.jpg");
+        // 为XBanner绑定数据
+        mXBanner.setData(imgesUrl, null);//第二个参数为提示文字资源集合
+        // XBanner适配数据
+        mXBanner.setmAdapter(new XBanner.XBannerAdapter() {
+            @Override
+            public void loadBanner(XBanner banner, Object model, View view, int position) {
+                Glide.with(getActivity()).load(imgesUrl.get(position)).into((ImageView) view);
+            }
+        });
+        // 设置XBanner的页面切换特效，选择一个即可，总的大概就这么多效果啦，欢迎使用
+        mXBanner.setPageTransformer(Transformer.Default);         //横向移动
+        mXBanner.setPageTransformer(Transformer.Alpha);           //渐变，效果不明显
+        mXBanner.setPageTransformer(Transformer.Rotate);          //单页旋转
+        mXBanner.setPageTransformer(Transformer.Cube);            //立体旋转
+        mXBanner.setPageTransformer(Transformer.Flip);            // 反转效果
+        mXBanner.setPageTransformer(Transformer.Accordion);      //三角换页
+        mXBanner.setPageTransformer(Transformer.ZoomFade);       // 缩小本页，同时放大另一页
+        mXBanner.setPageTransformer(Transformer.ZoomCenter);     //本页缩小一点，另一页就放大
+        mXBanner.setPageTransformer(Transformer.ZoomStack);      // 本页和下页同事缩小和放大
+        mXBanner.setPageTransformer(Transformer.Stack);          //本页和下页同时左移
+        mXBanner.setPageTransformer(Transformer.Depth);          //本页左移，下页从后面出来
+        mXBanner.setPageTransformer(Transformer.Zoom);           //本页刚左移，下页就在后面
+        // 设置XBanner页面切换的时间，即动画时长
+        mXBanner.setPageChangeDuration(1000);
+        mXBanner.setOnItemClickListener(new XBanner.OnItemClickListener() {
+            @Override
+            public void onItemClick(XBanner banner, int position) {
+                ToastUtil.toast("你点击了第" + position + "图片");
+                Logger.d(position);
+            }
+        });
+        //加载广告图片
     }
 
     /**
@@ -212,19 +266,6 @@ public class TabHomeFragment extends BaseFragment {
         }
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        Log.i("TAG", "onStart: " + "开始定位");
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mLocationClient.stop();
-        Log.i("TAG", "onStart: " + "暂停定位");
-    }
-
     /**
      * 权限
      *
@@ -252,5 +293,35 @@ public class TabHomeFragment extends BaseFragment {
                 break;
             default:
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Logger.d("开始定位");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        //开始定位
+        mLocationClient.start();
+        //开始轮播
+        mXBanner.startAutoPlay();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        //结束轮播
+        mXBanner.stopAutoPlay();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        //结束定位
+        mLocationClient.stop();
+        Logger.d("暂停定位");
     }
 }

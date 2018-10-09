@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/size20"
+    android:background="@color/color_white"
+    android:paddingLeft="@dimen/size30"
+    android:paddingRight="@dimen/size30">
+
+    <RelativeLayout
+        android:id="@+id/item_orderList_delete_ll"
+        android:layout_width="@dimen/size300"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="@dimen/size20"
+        android:paddingTop="@dimen/size24">
+
+        <ImageView
+            android:id="@+id/item_orderList_delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/shape" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_orderList_drugName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_delete_ll"
+        android:text="阿莫西林胶囊阿莫西林阿莫西林西林胶…"
+        android:textColor="@color/color_333"
+        android:textSize="@dimen/txt18" />
+
+    <TextView
+        android:id="@+id/item_orderList_drugSpec_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:text="@string/item_scavengers_spec"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_specContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugName_tv"
+        android:layout_marginTop="@dimen/size22"
+        android:layout_toRightOf="@+id/item_orderList_drugSpec_tv"
+        android:text="不详"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_drugPackage_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugSpec_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_scavengers_package"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_packageContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugSpec_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_scavengers_drugPackage_tv"
+        android:text="12粒／盒"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_drugFactory_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugPackage_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_scavengers_factory"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_factoryContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugPackage_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_orderList_drugFactory_tv"
+        android:text="朗致集团双人药业有限公司"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_drugDate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_factoryContent_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:text="@string/item_scavengers_date"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <TextView
+        android:id="@+id/item_orderList_dateContent_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_factoryContent_tv"
+        android:layout_marginTop="@dimen/size16"
+        android:layout_toRightOf="@+id/item_orderList_drugDate_tv"
+        android:text="1年"
+        android:textColor="@color/color_999"
+        android:textSize="@dimen/txt13" />
+
+    <RelativeLayout
+        android:id="@+id/item_orderList_car_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_drugDate_tv"
+        android:layout_marginTop="@dimen/size20">
+
+        <TextView
+            android:id="@+id/item_orderList_moneySign_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item_orderList_money_tv"
+            android:text="￥"
+            android:textColor="@color/color_EB3E2D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/item_orderList_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_orderList_moneySign_tv"
+            android:text="188"
+            android:textColor="@color/color_EB3E2D"
+            android:textSize="@dimen/txt20" />
+
+        <TextView
+            android:id="@+id/item_orderList_initialMoney_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size14"
+            android:layout_toRightOf="@+id/item_orderList_money_tv"
+            android:text="￥169"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/item_orderList_line"
+            android:layout_width="@dimen/size78"
+            android:layout_height="@dimen/size1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size14"
+            android:layout_toRightOf="@+id/item_orderList_money_tv"
+            android:background="@color/color_999" />
+
+        <TextView
+            android:id="@+id/item_orderList_goodsNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_orderList_AddGood_iv"
+            android:text="10"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt18" />
+
+        <ImageView
+            android:id="@+id/item_orderList_reduceGood_iv"
+            android:layout_width="@dimen/size56"
+            android:layout_height="@dimen/size56"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_toLeftOf="@+id/item_orderList_goodsNum_tv"
+            android:background="@drawable/white_bg_jian"
+            android:padding="@dimen/size15"
+            android:src="@drawable/jian" />
+
+        <ImageView
+            android:id="@+id/item_orderList_AddGood_iv"
+            android:layout_width="@dimen/size56"
+            android:layout_height="@dimen/size56"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size20"
+            android:background="@drawable/red_bg_num"
+            android:padding="@dimen/size15"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_orderList_discount_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_car_rl"
+        android:layout_marginTop="@dimen/size60">
+
+        <TextView
+            android:id="@+id/item_orderList_discount_tv"
+            android:layout_width="@dimen/size72"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_bg_sign"
+            android:gravity="center"
+            android:text="@string/item_scavengers_discount"
+            android:textColor="@color/color_EB3E2D"
+            android:textSize="@dimen/txt10" />
+
+        <TextView
+            android:id="@+id/item_orderList_discountContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toRightOf="@+id/item_orderList_discount_tv"
+            android:text="满30件打9折"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/txt14" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_orderList_fullGift_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_discount_rl"
+        android:layout_marginTop="@dimen/size18">
+
+        <TextView
+            android:id="@+id/item_orderList_fullGift_tv"
+            android:layout_width="@dimen/size72"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_bg_sign"
+            android:gravity="center"
+            android:text="@string/item_scavengers_fullGift"
+            android:textColor="@color/color_EB3E2D"
+            android:textSize="@dimen/txt10" />
+
+        <TextView
+            android:id="@+id/item_orderList_fullGiftContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toRightOf="@+id/item_orderList_fullGift_tv"
+            android:text="赠品」阿莫西林胶囊"
+            android:textColor="@color/color_666"
+            android:textSize="@dimen/txt14" />
+
+        <TextView
+            android:id="@+id/item_orderList_fullGiftNum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="x30"
+            android:textColor="@color/color_333"
+            android:textSize="@dimen/txt14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_orderList_cond_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_orderList_fullGift_rl"
+        android:layout_marginBottom="@dimen/size24"
+        android:layout_marginTop="@dimen/size18">
+
+        <TextView
+            android:id="@+id/item_orderList_cond_tv"
+            android:layout_width="@dimen/size72"
+            android:layout_height="@dimen/size30"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_bg_sign"
+            android:gravity="center"
+            android:text="@string/item_scavengers_cond"
+            android:textColor="@color/color_EB3E2D"
+            android:textSize="@dimen/txt10" />
+
+        <TextView
+            android:id="@+id/item_orderList_condContent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toRightOf="@+id/item_orderList_cond_tv"
+            android:text="满20盒起赠"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/txt14" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,35 +1,35 @@
 package com.zyjk.posmall.ui.fragment;
 
 import android.view.View;
-import android.widget.TextView;
 
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseFragment;
-
-import butterknife.BindView;
-import butterknife.OnClick;
+import com.zyjk.posmall.base.BasePageFragment;
 
 /**
  * Created by Administrator on 2018/9/13.
  * 订单详情
  */
 
-public class Already_OrderDetailsFragment extends BaseFragment {
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
-
+public class Already_OrderDetailsFragment extends BasePageFragment {
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.fragment_send_orderdetails;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("订单详情");
+        TitleSet();
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -38,15 +38,10 @@ public class Already_OrderDetailsFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.titleBar_left_iv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.titleBar_left_iv:
-                getActivity().finish();
-                break;
-            default:
-                break;
+
         }
     }
 }

@@ -9,8 +9,8 @@ import android.widget.LinearLayout;
 
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.adapter.SlidePagerAdapter;
-import com.zyjk.posmall.base.BaseActivity;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.base.BasePageActivity;
+import com.zyjk.posmall.tools.CommonUtils;
 
 import java.util.ArrayList;
 
@@ -18,24 +18,28 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * Created by Sword God on 2018/8/28.
- * 引导页
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2514:59
+ * desc   : 引导页
+ * version: 1.0
  */
 
-public class GuideActivity extends BaseActivity {
+
+public class GuideActivity extends BasePageActivity {
 
     private ArrayList<View> mList;
     private ImageView[] mImageViews;
 
     @BindView(R.id.viewPager)
     ViewPager viewPager;
-    @BindView(R.id.btn_im_exp)
+    @BindView(R.id.guide_btn)
     Button btnImExp;
-    @BindView(R.id.llyt_dots)
+    @BindView(R.id.guide_dots_ll)
     LinearLayout layoutDots;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_guide;
     }
 
@@ -43,9 +47,9 @@ public class GuideActivity extends BaseActivity {
     public void initViews() {
         LayoutInflater inflater = getLayoutInflater();
         mList = new ArrayList<>();
-        mList.add(inflater.inflate(R.layout.view_guide_first, null));
-        mList.add(inflater.inflate(R.layout.view_guide_two, null));
-        mList.add(inflater.inflate(R.layout.view_guide_third, null));
+        mList.add(inflater.inflate(R.layout.view_guidefirst, null));
+        mList.add(inflater.inflate(R.layout.view_guidetwo, null));
+        mList.add(inflater.inflate(R.layout.view_guidethird, null));
 
         //底部点实现
         mImageViews = new ImageView[mList.size()];
@@ -70,7 +74,7 @@ public class GuideActivity extends BaseActivity {
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -79,11 +83,11 @@ public class GuideActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.btn_im_exp})
+    @OnClick({R.id.guide_btn})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_im_exp:
+            case R.id.guide_btn:
                 CommonUtils.startAct(getApplicationContext(), MainActivity.class);
                 break;
         }

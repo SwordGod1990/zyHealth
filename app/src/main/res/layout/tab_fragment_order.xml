@@ -5,13 +5,17 @@
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_frg_order_tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleBar_ll"
+        android:layout_below="@+id/mTitleBar"
         android:background="@color/color_EB3E2D"
         app:tabIndicatorColor="@color/color_yellow"
         app:tabIndicatorHeight="2dp"

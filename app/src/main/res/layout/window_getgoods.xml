@@ -9,7 +9,7 @@
         android:id="@+id/window_getGoods_ll"
         android:layout_width="@dimen/size540"
         android:layout_height="@dimen/size288"
-        android:background="@drawable/window_refund_bg"
+        android:background="@drawable/white_ppw_replace"
         android:orientation="vertical">
 
         <TextView

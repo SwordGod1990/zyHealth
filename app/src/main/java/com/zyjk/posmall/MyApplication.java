@@ -5,11 +5,10 @@ import android.os.Handler;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
-import com.zyjk.posmall.utils.SpUtil;
-
-import java.util.concurrent.TimeUnit;
-
-import okhttp3.OkHttpClient;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.umeng.analytics.MobclickAgent;
+import com.zyjk.posmall.tools.ActivityManager;
+import com.zyjk.posmall.tools.SpUtil;
 
 /**
  * Created by Administrator on 2018/9/3.
@@ -17,7 +16,7 @@ import okhttp3.OkHttpClient;
 
 public class MyApplication extends MultiDexApplication {
     protected static final String TAG = "MyApplication";
-
+    private static ActivityManager activityManager = null; // activity管理类
     public static boolean SKIP_WELCOME;
     private static MyApplication instance = new MyApplication();
     private static Handler handler;
@@ -36,13 +35,17 @@ public class MyApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        activityManager = ActivityManager.getInstance(); // 获得实例
         MultiDex.install(getInstance());
-
         handler = new Handler();
-
         // 首次启动不跳过欢迎界面；
         SKIP_WELCOME = false;
+        Fresco.initialize(getInstance());
+        initUMeng();
+    }
+
+    public ActivityManager getActivityManager() {
+        return activityManager;
     }
 
     @Override
@@ -75,8 +78,8 @@ public class MyApplication extends MultiDexApplication {
         String loginKey = SpUtil.getString(this, "loginKey");
         return loginKey;
     }
-//    public void initUMeng(){
-//        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType. E_UM_NORMAL);
-//        MobclickAgent.openActivityDurationTrack(false);
-//    }
+    public void initUMeng(){
+        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType. E_UM_NORMAL);
+        MobclickAgent.openActivityDurationTrack(false);
+    }
 }

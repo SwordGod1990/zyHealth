@@ -189,7 +189,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/size20"
             android:layout_toLeftOf="@+id/item_drugMessage_drudNum_tv"
-            android:background="@drawable/circle_car_white"
+            android:background="@drawable/white_bg_jian"
             android:padding="@dimen/size15"
             android:src="@drawable/jian" />
 
@@ -200,7 +200,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/size20"
-            android:background="@drawable/circle_car_red"
+            android:background="@drawable/red_bg_num"
             android:padding="@dimen/size15"
             android:src="@drawable/add" />
     </RelativeLayout>

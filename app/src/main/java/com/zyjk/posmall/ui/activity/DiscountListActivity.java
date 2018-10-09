@@ -1,26 +1,25 @@
 package com.zyjk.posmall.ui.activity;
 
-import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.CustomFooterViewCallBack;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.adapter.DiscountListAdapter;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
 import com.zyjk.posmall.bean.AllDiscountModel;
+import com.zyjk.posmall.page.LoadPage;
 import com.zyjk.posmall.request.LogException;
 import com.zyjk.posmall.request.RequestResult;
 import com.zyjk.posmall.request.RetrofitManager;
 import com.zyjk.posmall.request.Transformer;
-import com.zyjk.posmall.page.LoadPage;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.tools.CommonUtils;
+import com.zyjk.posmall.view.TitleBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,28 +31,29 @@ import butterknife.OnClick;
  * Created by Sword God on 2018/9/6.
  * 折扣优惠
  */
-public class DiscountListActivity extends BaseActivity {
+public class DiscountListActivity extends BasePageActivity {
+
     private ArrayList<String> list;
     private int page = 1;
     private View mFooterView;
 
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
     @BindView(R.id.aty_discountList_xrv)
     XRecyclerView mXRecyclerView;
     @BindView(R.id.mLoadPage)
     LoadPage mLoadPage;
     @BindView(R.id.aty_discountList_rl)
     RelativeLayout discountList_rl;
+    @BindView(R.id.mTitleBar)
+    TitleBar mTitleBar;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_discount;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("折扣优惠");
+        TitleSet();
         initData();
         loadData();
         mFooterView = LayoutInflater.from(this).inflate(R.layout.view_footer, null);
@@ -85,7 +85,7 @@ public class DiscountListActivity extends BaseActivity {
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
         //展示
         mLoadPage.setGetDataListener(new LoadPage.GetDataListener() {
             @Override
@@ -113,6 +113,32 @@ public class DiscountListActivity extends BaseActivity {
                 //mXRecyclerView.loadMoreComplete();
             }
         });
+    }
+
+    @Override
+    public void initData() {
+        list = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            list.add(i + "阿莫西林胶囊");
+        }
+    }
+
+    @OnClick({R.id.view_bottom_rl})
+    @Override
+    public void viewsClick(View view) {
+        switch (view.getId()) {
+            case R.id.view_bottom_rl:
+                CommonUtils.startAct(this, OrderListActivity.class);
+                this.finish();
+                break;
+        }
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+        mTitleBar.setBackFinish(this);
     }
 
     /**
@@ -144,28 +170,6 @@ public class DiscountListActivity extends BaseActivity {
                         }
                     }
                 });
-    }
-
-    @Override
-    public void initData() {
-        list = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            list.add(i + "阿莫西林胶囊");
-        }
-    }
-
-    @OnClick({R.id.titleBar_left_ll, R.id.view_bottom_rl})
-    @Override
-    public void processClick(View view) {
-        switch (view.getId()) {
-            case R.id.titleBar_left_ll:
-                finish();
-                break;
-            case R.id.view_bottom_rl:
-                CommonUtils.startAct(this, ScavengersActivity.class);
-                this.finish();
-                break;
-        }
     }
 
     public DiscountListAdapter.MyClickListener mListener = new DiscountListAdapter.MyClickListener() {

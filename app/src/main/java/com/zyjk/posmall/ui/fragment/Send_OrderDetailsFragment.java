@@ -1,16 +1,19 @@
 package com.zyjk.posmall.ui.fragment;
 
-import android.view.Gravity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.TextView;
 
+import com.aspsine.irecyclerview.IRecyclerView;
+import com.orhanobut.logger.Logger;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseFragment;
-import com.zyjk.posmall.window.RefundPopWindow;
-import com.zyjk.posmall.ui.activity.RefundNoticeActivity;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.adapter.SendAdapter;
+import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.view.MyScrollview;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -20,45 +23,52 @@ import butterknife.OnClick;
  * 订单详情(待发货)
  */
 
-public class Send_OrderDetailsFragment extends BaseFragment implements RefundPopWindow.OnItemClickListener {
+public class Send_OrderDetailsFragment extends BasePageFragment {
 
-    private RefundPopWindow popWindow;
-
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
+    private ArrayList<String> list;
     @BindView(R.id.orderDetails_myScrollview)
     MyScrollview mScrollView;
+    @BindView(R.id.frg_send_RecyclerView)
+    RecyclerView mRecyclerView;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.fragment_send_orderdetails;
     }
 
     @Override
     public void initViews() {
-        popWindow = new RefundPopWindow(getActivity());
-        titleBar_center_tv.setText("订单详情");
+        TitleSet();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        SendAdapter sendAdapter = new SendAdapter(getContext(), R.layout.item_send, list);
+        mRecyclerView.setAdapter(sendAdapter);
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
     }
 
     @Override
-    public void initListener() {
-        popWindow.setOnItemClickListener(this);
+    public void registerListener() {
     }
 
     @Override
     public void initData() {
-
+        list = new ArrayList<>();
+        for (int i = 'A'; i < 'Z'; i++) {
+            list.add("" + (char) i);
+        }
+        Logger.d(list);
     }
 
-    @OnClick({R.id.titleBar_left_iv, R.id.orderDetails_refund_tv})
+    @OnClick({R.id.orderDetails_refund_tv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.titleBar_left_iv:
-                getActivity().finish();
-                break;
             case R.id.orderDetails_refund_tv:
-                popWindow.showAtLocation(mScrollView, Gravity.CENTER | Gravity.CENTER, 0, 0);
                 break;
             default:
                 break;
@@ -69,21 +79,5 @@ public class Send_OrderDetailsFragment extends BaseFragment implements RefundPop
     public void onStart() {
         super.onStart();
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);//隐藏自动软键盘
-    }
-
-    @Override
-    public void setOnItemClick(View v) {
-        switch (v.getId()) {
-            case R.id.window_refund_cancel_tv:
-                popWindow.dismiss();
-                break;
-            case R.id.window_refund_true_tv:
-                //确定
-                CommonUtils.startAct(getActivity(), RefundNoticeActivity.class);
-                popWindow.dismiss();
-                break;
-            default:
-                break;
-        }
     }
 }

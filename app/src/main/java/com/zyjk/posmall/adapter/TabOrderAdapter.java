@@ -9,13 +9,13 @@ import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.base.CommonFragmentActivity;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.tools.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/9/13.
+ * Created by Sword God on 2018/9/13.
  */
 
 public class TabOrderAdapter extends CommonAdapter<String> {

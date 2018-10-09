@@ -3,12 +3,12 @@ package com.zyjk.posmall.base;
 import android.content.Context;
 
 import rx.subscriptions.CompositeSubscription;
-
 /**
- * Description：请求取消及Context获取
- *
- * @author Created by: Li_Min
- * Time:2018/8/4
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2516:08
+ * desc   : 请求取消及Context获取
+ * version: 1.0
  */
 public abstract class BaseSubscription implements BasePresenter {
 

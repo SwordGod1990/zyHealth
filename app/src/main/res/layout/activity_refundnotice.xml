@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--退款通知-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="退款通知" />
 
     <TextView
-        android:id="@+id/aty_refundNotice_moneyName_tv"
+        android:id="@+id/refundNotice_moneyName_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size82"
@@ -17,26 +21,26 @@
         android:textSize="@dimen/txt15" />
 
     <RelativeLayout
-        android:id="@+id/aty_refundNotice_money_rl"
+        android:id="@+id/refundNotice_money_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size20"
         android:gravity="center_horizontal">
 
         <TextView
-            android:id="@+id/aty_refundNotice_moneyUnit_tv"
+            android:id="@+id/refundNotice_moneyUnit_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/aty_refundNotice_moneyNum_tv"
+            android:layout_alignBaseline="@+id/refundNotice_moneyNum_tv"
             android:text="@string/money_unit"
             android:textColor="@color/color_151515"
             android:textSize="@dimen/txt28" />
 
         <TextView
-            android:id="@+id/aty_refundNotice_moneyNum_tv"
+            android:id="@+id/refundNotice_moneyNum_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/aty_refundNotice_moneyUnit_tv"
+            android:layout_toRightOf="@+id/refundNotice_moneyUnit_tv"
             android:text="2000.00"
             android:textColor="@color/color_151515"
             android:textSize="@dimen/txt40" />
@@ -52,7 +56,7 @@
         android:textSize="@dimen/txt15" />
 
     <RelativeLayout
-        android:id="@+id/aty_refundNotice_way_rl"
+        android:id="@+id/refundNotice_way_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/size30"
@@ -60,7 +64,7 @@
         android:layout_marginTop="@dimen/size60">
 
         <TextView
-            android:id="@+id/aty_refundNotice_wayName_tv"
+            android:id="@+id/refundNotice_wayName_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/refundNotice_way"
@@ -68,17 +72,17 @@
             android:textSize="@dimen/txt14" />
 
         <TextView
-            android:id="@+id/aty_refundNotice_wayContent_tv"
+            android:id="@+id/refundNotice_wayContent_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/aty_refundNotice_wayName_tv"
+            android:layout_toRightOf="@+id/refundNotice_wayName_tv"
             android:text="@string/refundNotice_pay"
             android:textColor="@color/color_999"
             android:textSize="@dimen/txt14" />
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/aty_refundNotice_date_rl"
+        android:id="@+id/refundNotice_date_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/size30"
@@ -86,7 +90,7 @@
         android:layout_marginTop="@dimen/size22">
 
         <TextView
-            android:id="@+id/aty_refundNotice_dateName_tv"
+            android:id="@+id/refundNotice_dateName_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/refundNotice_time"
@@ -94,22 +98,22 @@
             android:textSize="@dimen/txt14" />
 
         <TextView
-            android:id="@+id/aty_refundNotice_dateContent_tv"
+            android:id="@+id/refundNotice_dateContent_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/aty_refundNotice_dateName_tv"
+            android:layout_toRightOf="@+id/refundNotice_dateName_tv"
             android:text="@string/refundNotice_bank"
             android:textColor="@color/color_999"
             android:textSize="@dimen/txt14" />
 
         <TextView
-            android:id="@+id/aty_refundNotice_dateContent02_tv"
+            android:id="@+id/refundNotice_dateContent02_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/aty_refundNotice_dateContent_tv"
-            android:layout_below="@+id/aty_refundNotice_dateContent_tv"
-            android:text="@string/refundNotice_24"
+            android:layout_alignLeft="@+id/refundNotice_dateContent_tv"
+            android:layout_below="@+id/refundNotice_dateContent_tv"
             android:layout_marginTop="@dimen/size10"
+            android:text="@string/refundNotice_24"
             android:textColor="@color/color_999"
             android:textSize="@dimen/txt14" />
     </RelativeLayout>

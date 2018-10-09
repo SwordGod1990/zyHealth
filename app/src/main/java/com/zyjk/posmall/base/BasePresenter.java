@@ -17,11 +17,13 @@
 package com.zyjk.posmall.base;
 
 /**
- * Description：presenter通用接口定义
- *
- * @author Created by: Li_Min
- *         Time:2018/8/2
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2516:08
+ * desc   : presenter通用接口定义
+ * version: 1.0
  */
+
 public interface BasePresenter {
 
     /**

@@ -1,35 +1,42 @@
 package com.zyjk.posmall.ui.activity;
 
 import android.view.View;
-import android.widget.TextView;
 
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
+import com.zyjk.posmall.view.TitleBar;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/9/8.
  * 退款通知
  */
 
-public class RefundNoticeActivity extends BaseActivity {
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
+public class RefundNoticeActivity extends BasePageActivity {
+
+    @BindView(R.id.mTitleBar)
+    TitleBar mTitleBar;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_refundnotice;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("退款通知");
+        TitleSet();
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+        mTitleBar.setBackFinish(this);
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -38,13 +45,10 @@ public class RefundNoticeActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.titleBar_left_ll})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.titleBar_left_ll:
-                finish();
-                break;
+
         }
     }
 }

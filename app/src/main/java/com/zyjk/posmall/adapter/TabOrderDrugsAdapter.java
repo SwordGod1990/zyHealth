@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/9/13.
+ * Created by Sword God on 2018/9/13.
  */
 
 public class TabOrderDrugsAdapter extends CommonAdapter<String> {

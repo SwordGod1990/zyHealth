@@ -3,6 +3,23 @@
     <declare-styleable name="roundedimageview">
         <attr name="border_thickness" format="dimension" />
         <attr name="border_inside_color" format="color" />
-        <attr name="border_outside_color" format="color"></attr>
+        <attr name="border_outside_color" format="color"/>
     </declare-styleable>
+
+    <!--标题-->
+    <declare-styleable name="TitleBar">
+        <!--标题-->
+        <attr name="title" format="string" />
+        <!--右边文字-->
+        <attr name="rightText" format="string" />
+        <!--右边图片-->
+        <attr name="rightIcon" format="reference" />
+        <!--右边文字是否可见-->
+        <attr name="rightTextVisible" format="boolean" />
+        <!--右边图片是否可见-->
+        <attr name="rightIconVisible" format="boolean" />
+        <!--是否隐藏返回键-->
+        <attr name="backVisible" format="boolean" />
+    </declare-styleable>
+
 </resources>

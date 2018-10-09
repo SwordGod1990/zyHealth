@@ -3,51 +3,55 @@ package com.zyjk.posmall.ui.fragment;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.base.Constant;
-import com.zyjk.posmall.ui.activity.ScavengersActivity;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.ui.activity.OrderListActivity;
+import com.zyjk.posmall.tools.CommonUtils;
+import com.zyjk.posmall.view.TitleBar;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2018/9/6.
  * 商品详情(促销)
  */
 
-public class DiscountDetailsFragment extends BaseFragment {
+public class DiscountDetailsFragment extends BasePageFragment {
 
     private CountDownTimer timer;
     private long timeStemp = 0000;//24h时间戳
 
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
-    @BindView(R.id.titleBar_left_iv)
-    ImageView titleBar_left_iv;
-    @BindView(R.id.discount_details_D)
+    @BindView(R.id.discountDetails_D)
     TextView discount_M_tv;
-    @BindView(R.id.discount_details_H)
+    @BindView(R.id.discountDetails_H)
     TextView discount_D_tv;
-    @BindView(R.id.discount_details_M)
+    @BindView(R.id.discountDetails_M)
     TextView discount_H_tv;
+    @BindView(R.id.mTitleBar)
+    TitleBar mTitleBar;
 
     @Override
-    protected int getContentView() {
-        return R.layout.fragment_discount_deatils;
+    public int getLayoutID() {
+        return R.layout.fragment_discountdeatils;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("商品详情");
+        TitleSet();
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+        mTitleBar.setBackFinish(getActivity());
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -56,17 +60,12 @@ public class DiscountDetailsFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.titleBar_left_iv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.titleBar_left_iv:
-                //返回
-                getActivity().finish();
-                break;
             case R.id.view_bottom_rl:
                 //清单列表
-                CommonUtils.startAct(getContext(), ScavengersActivity.class);
+                CommonUtils.startAct(getContext(), OrderListActivity.class);
                 break;
             default:
                 break;

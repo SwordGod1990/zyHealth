@@ -1,38 +1,34 @@
 package com.zyjk.posmall.ui.activity;
 
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
 
-import butterknife.BindView;
 
 /**
- * Created by Sword God on 2018/8/28.
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2514:59
+ * desc   : 登陆
+ * version: 1.0
  */
 
-public class LoginActivity extends BaseActivity {
 
-    @BindView(R.id.titleBar_left_iv)
-    ImageView titleBar_left_iv;
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
+public class LoginActivity extends BasePageActivity {
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_login;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("登陆");
-        titleBar_left_iv.setVisibility(View.GONE);
+
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -42,7 +38,7 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
 
     }
 }

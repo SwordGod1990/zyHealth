@@ -9,8 +9,8 @@ import android.util.SparseArray;
 import com.zyjk.posmall.api.HttpService;
 import com.zyjk.posmall.api.HttpService2;
 import com.zyjk.posmall.api.HttpUrl;
-import com.zyjk.posmall.utils.GsonUtils;
-import com.zyjk.posmall.utils.LogUtils;
+import com.zyjk.posmall.tools.GsonUtils;
+import com.zyjk.posmall.tools.LogUtils;
 
 import java.io.IOException;
 import java.util.Locale;

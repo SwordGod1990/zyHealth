@@ -10,7 +10,7 @@ import com.zyjk.posmall.ui.fragment.Already_OrderDetailsFragment;
 import com.zyjk.posmall.ui.fragment.Close_OrderDetailsFragment;
 import com.zyjk.posmall.ui.fragment.ConfirmPurchaseFragment;
 import com.zyjk.posmall.ui.fragment.DiscountDetailsFragment;
-import com.zyjk.posmall.ui.fragment.FullGiftDetailsFragment;
+import com.zyjk.posmall.ui.fragment.PresentDetailsFragment;
 import com.zyjk.posmall.ui.fragment.Get_OrderDetailsFragment;
 import com.zyjk.posmall.ui.fragment.OrderSuccessFragment;
 import com.zyjk.posmall.ui.fragment.Pay_OrderDetailsFragment;
@@ -21,7 +21,7 @@ import com.zyjk.posmall.ui.fragment.Send_OrderDetailsFragment;
  * 单个fragment页面 可以统一走这里
  */
 
-public class CommonFragmentActivity extends BaseActivity {
+public class CommonFragmentActivity extends BasePageActivity {
     public static final String TARGET = "target";
     public static final int FRAGMENT_MODIFY_PHONE = 1; // 修改手机
     public static final int FRAGMENT_MODIFY_PWD = 2;   //修改密码
@@ -40,7 +40,7 @@ public class CommonFragmentActivity extends BaseActivity {
     private FragmentManager fragmentManager;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_common;
     }
 
@@ -70,7 +70,7 @@ public class CommonFragmentActivity extends BaseActivity {
                 break;
             case FRAGMENT_GIFT_DETAILS:
                 //满赠详情
-                fragment = new FullGiftDetailsFragment();
+                fragment = new PresentDetailsFragment();
                 break;
             case FRAGMENT_CONFIRM_PURCHASE:
                 //确认采购
@@ -100,6 +100,7 @@ public class CommonFragmentActivity extends BaseActivity {
                 //交易关闭
                 fragment = new Close_OrderDetailsFragment();
                 break;
+
             default:
                 break;
         }
@@ -108,7 +109,7 @@ public class CommonFragmentActivity extends BaseActivity {
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -118,7 +119,7 @@ public class CommonFragmentActivity extends BaseActivity {
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
 
     }
 }

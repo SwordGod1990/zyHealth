@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?><!--填写收货信息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4"
+    android:orientation="vertical">
+
+    <com.zyjk.posmall.view.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="填写收货信息" />
+
+    <RelativeLayout
+        android:id="@+id/receiptInformation_people_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/size30">
+
+        <TextView
+            android:id="@+id/receiptInformation_peopleName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receiveGoodsMsg_people"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/receiptInformation_people_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="驴得水"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:layout_marginLeft="@dimen/size30"
+        android:background="@color/color_E6E6E6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/size30">
+
+        <TextView
+            android:id="@+id/receiptInformation_phoneName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receiveGoodsMsg_phone"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/receiptInformation_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="15647448007"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:layout_marginLeft="@dimen/size30"
+        android:background="@color/color_E6E6E6" />
+
+    <RelativeLayout
+        android:id="@+id/receiptInformation_area_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/size30">
+
+        <TextView
+            android:id="@+id/receiptInformation_areaName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receiveGoodsMsg_area"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/receiptInformation_area_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/receiptInformation_area_iv"
+            android:text="北京市  北京市  大兴区"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <ImageView
+            android:id="@+id/receiptInformation_area_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size11"
+            android:src="@drawable/right" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:layout_marginLeft="@dimen/size30"
+        android:background="@color/color_E6E6E6" />
+
+    <RelativeLayout
+        android:id="@+id/receiptInformation_address_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="@dimen/size30">
+
+        <TextView
+            android:id="@+id/receiptInformation_addressName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receiveGoodsMsg_address"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+
+        <TextView
+            android:id="@+id/receiptInformation_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="地则北街1号"
+            android:textColor="@color/color_4D4D4D"
+            android:textSize="@dimen/txt15" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/receiptInformation_save_tv"
+        android:layout_width="@dimen/size670"
+        android:layout_height="@dimen/size80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size102"
+        android:background="@drawable/red_btn_save"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/txt18" />
+</LinearLayout>

@@ -1,14 +1,12 @@
 package com.zyjk.posmall.ui.fragment;
 
 import android.view.View;
-import android.widget.TextView;
 
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.base.CommonFragmentActivity;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.tools.CommonUtils;
 
-import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -16,23 +14,27 @@ import butterknife.OnClick;
  * 订单提交成功
  */
 
-public class OrderSuccessFragment extends BaseFragment {
-
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
+public class OrderSuccessFragment extends BasePageFragment {
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.fragment_ordersuccess;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("订单提交成功");
+        TitleSet();
+    }
+
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -41,13 +43,10 @@ public class OrderSuccessFragment extends BaseFragment {
 
     }
 
-    @OnClick({R.id.titleBar_left_iv, R.id.frg_orderSuccess_lookOrder_iv})
+    @OnClick({R.id.frg_orderSuccess_lookOrder_iv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
-            case R.id.titleBar_left_iv:
-                getActivity().finish();
-                break;
             case R.id.frg_orderSuccess_lookOrder_iv:
                 //待发货
                 CommonUtils.startAct(getContext(), CommonFragmentActivity.FRAGMENT_SEND_ORDER_DETAILS);

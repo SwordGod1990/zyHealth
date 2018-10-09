@@ -7,7 +7,7 @@
         <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">false</item>-->
         <!--<item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
         <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_C72F20</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/color_EB3E2D</item>
     </style>
     <!-- @加载@ -->
     <style name="loadingDialogStyle" parent="@android:style/Theme.Holo.Light">
@@ -38,4 +38,13 @@
         <attr name="red_location" format="integer" />
         <attr name="red_textSize" format="dimension" />
     </declare-styleable>
+    <!--diaLog弹窗-->
+    <style name="CustomDialog_1" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
 </resources>

@@ -6,16 +6,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.window.PhotoPopupWindow;
 
 import java.io.File;
@@ -32,36 +30,37 @@ import static android.app.Activity.RESULT_OK;
  * Created by Sword God on 2018/8/28.
  */
 
-public class TabUserFragment extends BaseFragment implements PhotoPopupWindow.OnItemClickListener {
+public class TabUserFragment extends BasePageFragment implements PhotoPopupWindow.OnItemClickListener {
 
     private PhotoPopupWindow popupWindow;
     private Bitmap head;                              // 头像Bitmap
     private static String path = "/sdcard/myHead/";   // sd路径
 
-    @BindView(R.id.titleBar_left_iv)
-    ImageView titleBar_left_iv;
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
     @BindView(R.id.fragment_user_headPhoto_riv)
     ImageView fragment_user_headPhoto_riv;
     @BindView(R.id.frg_user_xrv)
     XRecyclerView mXRecyclerView;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.fragment_user;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("我的");
-        titleBar_left_iv.setVisibility(View.VISIBLE);
+        TitleSet();
         popupWindow = new PhotoPopupWindow(getContext());
     }
 
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
+    }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
         popupWindow.setOnItemClickListener(this);
     }
 
@@ -72,7 +71,7 @@ public class TabUserFragment extends BaseFragment implements PhotoPopupWindow.On
 
     @OnClick({R.id.fragment_user_headPhoto_riv})
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
             case R.id.fragment_user_headPhoto_riv:
                 //头像弹窗

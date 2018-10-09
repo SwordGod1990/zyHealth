@@ -10,7 +10,7 @@ import com.zyjk.posmall.ui.activity.GuideActivity;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 2018/9/4.
+ * Created by Sword God on 2018/9/4.
  */
 
 public class SlidePagerAdapter extends PagerAdapter {

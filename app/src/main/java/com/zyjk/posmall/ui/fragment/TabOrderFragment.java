@@ -6,13 +6,11 @@ import android.support.v7.widget.OrientationHelper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.adapter.TabOrderAdapter;
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.bean.TabModel;
 import com.zyjk.posmall.window.GetGoodsPopWindow;
 import com.zyjk.posmall.page.LoadPage;
@@ -27,7 +25,7 @@ import butterknife.BindView;
  * 订单
  */
 
-public class TabOrderFragment extends BaseFragment implements TabLayout.OnTabSelectedListener, GetGoodsPopWindow.OnItemClickListener {
+public class TabOrderFragment extends BasePageFragment implements TabLayout.OnTabSelectedListener, GetGoodsPopWindow.OnItemClickListener {
 
     private List<TabModel> tabs = new ArrayList<>();
     private TabModel tabModel;
@@ -38,10 +36,6 @@ public class TabOrderFragment extends BaseFragment implements TabLayout.OnTabSel
     private TabOrderAdapter orderAdapter;
     private View mView;
 
-    @BindView(R.id.titleBar_center_tv)
-    TextView titleBar_center_tv;
-    @BindView(R.id.titleBar_left_iv)
-    ImageView titleBar_left_iv;
     @BindView(R.id.tab_frg_order_tabLayout)
     TabLayout mTabLayout;
     @BindView(R.id.tab_frg_order_xrv)
@@ -51,14 +45,13 @@ public class TabOrderFragment extends BaseFragment implements TabLayout.OnTabSel
     private LinearLayoutManager layoutManager;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.tab_fragment_order;
     }
 
     @Override
     public void initViews() {
-        titleBar_center_tv.setText("采购单");
-        titleBar_left_iv.setVisibility(View.VISIBLE);
+        TitleSet();
 
         popWindow = new GetGoodsPopWindow(getContext());
         loadDtata();
@@ -80,8 +73,15 @@ public class TabOrderFragment extends BaseFragment implements TabLayout.OnTabSel
         mLoadPage.switchPage(LoadPage.STATE_LOADING);
     }
 
+    /**
+     * 标题设置
+     */
+    private void TitleSet() {
+
+    }
+
     @Override
-    public void initListener() {
+    public void registerListener() {
         //切换页面
         mTabLayout.addOnTabSelectedListener(this);
         popWindow.setOnItemClickListener(this);
@@ -104,7 +104,7 @@ public class TabOrderFragment extends BaseFragment implements TabLayout.OnTabSel
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
         switch (view.getId()) {
 
             default:

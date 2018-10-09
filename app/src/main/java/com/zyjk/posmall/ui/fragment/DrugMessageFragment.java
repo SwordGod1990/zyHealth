@@ -2,15 +2,15 @@ package com.zyjk.posmall.ui.fragment;
 
 import android.view.View;
 
-import com.zyjk.posmall.base.BaseFragment;
+import com.zyjk.posmall.base.BasePageFragment;
 
 /**
  * Created by Administrator on 2018/9/7.
  */
 
-public class DrugMessageFragment extends BaseFragment {
+public class DrugMessageFragment extends BasePageFragment {
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return 0;
     }
 
@@ -20,7 +20,7 @@ public class DrugMessageFragment extends BaseFragment {
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -30,7 +30,7 @@ public class DrugMessageFragment extends BaseFragment {
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
 
     }
 }

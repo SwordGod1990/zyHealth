@@ -6,7 +6,7 @@ import android.webkit.WebView;
 import com.github.lzyzsd.jsbridge.BridgeWebView;
 import com.github.lzyzsd.jsbridge.BridgeWebViewClient;
 import com.zyjk.posmall.MyApplication;
-import com.zyjk.posmall.utils.LogUtils;
+import com.zyjk.posmall.tools.LogUtils;
 
 
 /**

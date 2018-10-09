@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?><!--报货询价-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_EFEFF4">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backVisible="false"
+        app:title="首页" />
 
     <com.zyjk.posmall.view.MyScrollview
         android:id="@+id/goodsEnquiry_scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleBar_ll"
+        android:layout_below="@+id/mTitleBar"
         android:divider="#00000000"
         android:dividerHeight="0dp">
 
@@ -27,11 +33,25 @@
 
             </RelativeLayout>
 
+            <com.stx.xhb.xbanner.XBanner
+                android:id="@+id/goodsEnquiry_mXBanner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size252"
+                android:layout_below="@+id/goodsEnquiry_address_rl"
+                app:isShowIndicatorOnlyOne="true"
+                app:isShowNumberIndicator="false"
+                app:pageChangeDuration="800"
+                app:pointNormal="@drawable/shape_selected"
+                app:pointSelect="@drawable/shape_noraml"
+                app:pointsPosition="CENTER"
+                app:pointsVisibility="true"
+                app:tipTextSize="12sp" />
+
             <ImageView
                 android:id="@+id/goodsEnquiry_default_iv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/size252"
-                android:layout_below="@+id/goodsEnquiry_address_rl"
+                android:layout_below="@+id/goodsEnquiry_mXBanner"
                 android:layout_marginLeft="@dimen/size20"
                 android:layout_marginRight="@dimen/size20"
                 android:layout_marginTop="@dimen/size20"
@@ -51,9 +71,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size22"
                     android:layout_marginTop="@dimen/size40"
                     android:paddingLeft="@dimen/size20"
-                    android:layout_marginBottom="@dimen/size22"
                     android:paddingRight="@dimen/size20">
 
                     <TextView
@@ -76,8 +96,8 @@
                             android:id="@+id/goodsEnquiry_discountMore_tv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="@dimen/size6"
                             android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/size6"
                             android:layout_toLeftOf="@+id/goodsEnquiry_discountMore_iv"
                             android:text="@string/more"
                             android:textColor="@color/color_999"
@@ -122,8 +142,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="@dimen/size20"
                     android:layout_marginBottom="@dimen/size22"
+                    android:paddingLeft="@dimen/size20"
                     android:paddingRight="@dimen/size20">
 
                     <TextView

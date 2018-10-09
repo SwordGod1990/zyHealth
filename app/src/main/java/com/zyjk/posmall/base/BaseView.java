@@ -17,10 +17,11 @@
 package com.zyjk.posmall.base;
 
 /**
- * Description：View层通用处理接口
- *
- * @author Created by: Li_Min
- *         Time:2018/8/2
+ * author : Sword God
+ * e-mail : 156690858@qq.com
+ * date   : 2018/9/2516:08
+ * desc   : View层通用处理接口
+ * version: 1.0
  */
 public interface BaseView<T> {
 

@@ -6,11 +6,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.zyjk.posmall.MyApplication;
 import com.zyjk.posmall.R;
-import com.zyjk.posmall.base.BaseActivity;
+import com.zyjk.posmall.base.BasePageActivity;
 import com.zyjk.posmall.base.Constant;
-import com.zyjk.posmall.utils.CommonUtils;
+import com.zyjk.posmall.tools.CommonUtils;
 
 import butterknife.BindView;
 
@@ -19,22 +20,22 @@ import butterknife.BindView;
  * 欢迎页面
  */
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BasePageActivity {
 
     private SharedPreferences preferences;
     private int goNumbers;//进入次数
 
-    @BindView(R.id.splash_imageView_id)
+    @BindView(R.id.splash_iv)
     ImageView splash_imageView_id;
 
     @Override
-    protected int getContentView() {
+    public int getLayoutID() {
         return R.layout.activity_splash;
     }
 
     @Override
     public void initViews() {
-        splash_imageView_id.setBackgroundResource(R.drawable.ic_splash11);
+        Glide.with(getApplicationContext()).load(R.drawable.ic_splash11).into(splash_imageView_id);
         //读取SharedPreferences中需要的数据
         preferences = getSharedPreferences("goNumbers", MODE_WORLD_READABLE);
         goNumbers = preferences.getInt("goNumbers", 0);
@@ -47,7 +48,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    public void initListener() {
+    public void registerListener() {
 
     }
 
@@ -61,7 +62,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    public void processClick(View view) {
+    public void viewsClick(View view) {
 
     }
 

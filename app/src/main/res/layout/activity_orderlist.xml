@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?><!--清单列表-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_EFEFF4">
+
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="清单列表" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/orderList_ll"
+        android:layout_below="@+id/mTitleBar">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/orderList_xrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_EFEFF4"
+            android:paddingLeft="@dimen/size30"
+            android:paddingRight="@dimen/size30" />
+
+        <com.zyjk.posmall.page.LoadPage
+            android:id="@+id/mLoadPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/orderList_ll"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/orderList_num_rl"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:id="@+id/orderList_icon_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bill" />
+
+                <TextView
+                    android:id="@+id/orderList_num_tv"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/red_bg_num"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/orderList_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/orderList_num_rl"
+                android:text="￥0.0元"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderList_submit_tv"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/color_EB3E2D"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="去结算"
+                android:textColor="@color/color_white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderList_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size108"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/orderList_sweep_rl"
+            android:layout_width="@dimen/size280"
+            android:layout_height="@dimen/size80"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size68"
+            android:background="@drawable/white_bg_sign"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orderList_sweep_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/aty_scavengers_sweep"
+                android:textColor="@color/color_EB3E2D"
+                android:textSize="@dimen/txt18" />
+
+            <TextView
+                android:id="@+id/orderList_pc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderList_sweep_tv"
+                android:layout_centerHorizontal="true"
+                android:text="@string/aty_scavengers_pc"
+                android:textColor="@color/color_FF6C07"
+                android:textSize="@dimen/txt10" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/orderList_purchase_rl"
+            android:layout_width="@dimen/size280"
+            android:layout_height="@dimen/size80"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size68"
+            android:background="@drawable/public_discount_red"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orderList_purchase_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/aty_scavengers_purchase"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/txt18" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

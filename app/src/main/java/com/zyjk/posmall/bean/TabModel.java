@@ -3,7 +3,8 @@ package com.zyjk.posmall.bean;
 import java.io.Serializable;
 
 /**
- * Created by Administrator on 2018/9/14.
+ * Created by Sword God on 2018/9/14.
+ * 订单切换
  */
 
 public class TabModel implements Serializable {

@@ -1,7 +1,7 @@
 package com.zyjk.posmall.request;
 
 import com.google.gson.JsonParseException;
-import com.zyjk.posmall.utils.LogUtils;
+import com.zyjk.posmall.tools.LogUtils;
 
 import org.json.JSONException;
 
