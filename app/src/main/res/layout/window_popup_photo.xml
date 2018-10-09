@@ -15,7 +15,7 @@
         <Button
             android:id="@+id/window_circlePhoto_beatPhoto"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size50"
+            android:layout_height="@dimen/size100"
             android:background="@drawable/dialog_bg_white"
             android:gravity="center"
             android:text="拍照"
@@ -29,7 +29,7 @@
         <Button
             android:id="@+id/window_circlePhoto_selectPhoto"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size50"
+            android:layout_height="@dimen/size100"
             android:background="@color/color_ccc"
             android:gravity="center"
             android:text="从相册中选择"
@@ -47,9 +47,9 @@
             android:background="@color/color_999" />
 
         <Button
-            android:id="@+id/window_circlePhoto_cancle"
+            android:id="@+id/window_circlePhoto_cancel"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size50"
+            android:layout_height="@dimen/size100"
             android:background="@color/color_ccc"
             android:gravity="center"
             android:text="取消"

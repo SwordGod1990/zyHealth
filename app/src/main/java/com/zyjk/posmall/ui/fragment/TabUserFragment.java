@@ -102,7 +102,7 @@ public class TabUserFragment extends BasePageFragment implements PhotoPopupWindo
                 startActivityForResult(intent1, 1);
                 popupWindow.dismiss();
                 break;
-            case R.id.window_circlePhoto_cancle:
+            case R.id.window_circlePhoto_cancel:
                 popupWindow.dismiss();
                 break;
         }

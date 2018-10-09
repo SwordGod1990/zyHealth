@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_orderList_drugSpec_tv"
         android:layout_marginTop="@dimen/size16"
-        android:layout_toRightOf="@+id/item_scavengers_drugPackage_tv"
+        android:layout_toRightOf="@+id/item_orderList_drugPackage_tv"
         android:text="12粒／盒"
         android:textColor="@color/color_999"
         android:textSize="@dimen/txt13" />

@@ -48,7 +48,7 @@ public class PhotoPopupWindow extends PopupWindow implements View.OnClickListene
 
         btnTakePhoto = (Button) mPopView.findViewById(R.id.window_circlePhoto_beatPhoto);
         btnSelect = (Button) mPopView.findViewById(R.id.window_circlePhoto_selectPhoto);
-        btnCancel = (Button) mPopView.findViewById(R.id.window_circlePhoto_cancle);
+        btnCancel = (Button) mPopView.findViewById(R.id.window_circlePhoto_cancel);
     }
 
     /**
