@@ -50,7 +50,7 @@ public class PresentListActivity extends BasePageActivity {
 
     @Override
     public int getLayoutID() {
-        return R.layout.activity_present;
+        return R.layout.activity_presentlist;
     }
 
     @Override

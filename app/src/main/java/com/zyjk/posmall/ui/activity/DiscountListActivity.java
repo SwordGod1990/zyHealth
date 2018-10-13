@@ -37,18 +37,18 @@ public class DiscountListActivity extends BasePageActivity {
     private int page = 1;
     private View mFooterView;
 
-    @BindView(R.id.aty_discountList_xrv)
+    @BindView(R.id.discountList_xrv)
     XRecyclerView mXRecyclerView;
     @BindView(R.id.mLoadPage)
     LoadPage mLoadPage;
-    @BindView(R.id.aty_discountList_rl)
-    RelativeLayout discountList_rl;
+    @BindView(R.id.discountList_rl)
+    RelativeLayout mRelativeLayout;
     @BindView(R.id.mTitleBar)
     TitleBar mTitleBar;
 
     @Override
     public int getLayoutID() {
-        return R.layout.activity_discount;
+        return R.layout.activity_discountlist;
     }
 
     @Override
@@ -175,7 +175,7 @@ public class DiscountListActivity extends BasePageActivity {
     public DiscountListAdapter.MyClickListener mListener = new DiscountListAdapter.MyClickListener() {
         @Override
         protected void myOnClick(int tag, View v) {
-            discountList_rl.setVisibility(View.VISIBLE);
+            mRelativeLayout.setVisibility(View.VISIBLE);
         }
     };
 

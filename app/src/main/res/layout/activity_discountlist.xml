@@ -18,7 +18,7 @@
         android:background="@color/color_EFEFF4">
 
         <com.jcodecraeer.xrecyclerview.XRecyclerView
-            android:id="@+id/aty_discountList_xrv"
+            android:id="@+id/discountList_xrv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/color_white" />
@@ -31,7 +31,7 @@
     </FrameLayout>
 
     <RelativeLayout
-        android:id="@+id/aty_discountList_rl"
+        android:id="@+id/discountList_rl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
