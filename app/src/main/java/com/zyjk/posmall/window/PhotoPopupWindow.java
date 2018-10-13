@@ -60,7 +60,7 @@ public class PhotoPopupWindow extends PopupWindow implements View.OnClickListene
         this.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);// 设置弹出窗口的宽
         this.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);// 设置弹出窗口的高
         this.setFocusable(true);// 设置弹出窗口可
-        this.setAnimationStyle(R.style.mypopwindow_anim_style);// 设置动画
+        this.setAnimationStyle(R.style.window_style);// 设置动画
         this.setBackgroundDrawable(new ColorDrawable(0x00000000));// 设置背景透明
         mPopView.setOnTouchListener(new View.OnTouchListener() {// 如果触摸位置在窗口外面则销毁
 

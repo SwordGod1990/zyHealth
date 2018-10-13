@@ -22,7 +22,7 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
     <!-- @拍照动画选择@ -->
-    <style name="mypopwindow_anim_style">
+    <style name="window_style">
         <item name="android:windowEnterAnimation">@anim/anim_pop_in</item>
         <!-- 指定显示的动画xml -->
 
@@ -38,14 +38,5 @@
         <attr name="red_location" format="integer" />
         <attr name="red_textSize" format="dimension" />
     </declare-styleable>
-    <!--diaLog弹窗-->
-    <style name="CustomDialog_1" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="android:backgroundDimEnabled">false</item>
-    </style>
 
 </resources>

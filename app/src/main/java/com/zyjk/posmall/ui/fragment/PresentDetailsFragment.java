@@ -2,10 +2,7 @@ package com.zyjk.posmall.ui.fragment;
 
 import android.os.CountDownTimer;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -13,9 +10,9 @@ import com.zyjk.posmall.R;
 import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.base.Constant;
 import com.zyjk.posmall.tools.CommonUtils;
-import com.zyjk.posmall.tools.PopUtils;
 import com.zyjk.posmall.ui.activity.OrderListActivity;
 import com.zyjk.posmall.view.TitleBar;
+import com.zyjk.posmall.window.PresentPopWindow;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -25,8 +22,8 @@ import butterknife.OnClick;
  * 商品详情(满赠)
  */
 
-public class PresentDetailsFragment extends BasePageFragment {
-
+public class PresentDetailsFragment extends BasePageFragment implements PresentPopWindow.OnPopWindowClickListener {
+    private PresentPopWindow popWindow;
     private CountDownTimer timer;
     private long timeStemp = 1000;//24h时间戳
 
@@ -72,23 +69,8 @@ public class PresentDetailsFragment extends BasePageFragment {
         switch (view.getId()) {
             case R.id.presentDetails_gift_rl:
                 //赠品信息弹窗
-                PopUtils utils = new PopUtils(getActivity(), R.layout.dialog_refund, ViewGroup.LayoutParams.MATCH_PARENT, RadioGroup.LayoutParams.MATCH_PARENT, view, Gravity.CENTER, 0, 0, new PopUtils.ClickListener() {
-                    @Override
-                    public void setUplistener(PopUtils.PopBuilder builder) {
-                        builder.getView(R.id.window_refund_cancel_tv).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                builder.dismiss();
-                            }
-                        });
-                        builder.getView(R.id.window_refund_true_tv).setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                builder.dismiss();
-                            }
-                        });
-                    }
-                });
+                popWindow = new PresentPopWindow(getActivity(), this);
+                popWindow.show();
                 break;
             case R.id.view_bottom_rl:
                 CommonUtils.startAct(getContext(), OrderListActivity.class);
@@ -143,5 +125,14 @@ public class PresentDetailsFragment extends BasePageFragment {
         super.onPause();
         Log.i("-------TAG--------", "onPause: " + "暂停");
         stopTimerTask();
+    }
+
+    @Override
+    public void onPopWindowClickListener(View view) {
+        switch (view.getId()) {
+            case R.id.presentMessage_close_iv:
+                popWindow.dismiss();
+                break;
+        }
     }
 }

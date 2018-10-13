@@ -36,7 +36,6 @@ public class MD5Utils {
             // 标准的md5加密后的结果
             return buffer.toString();
         } catch (NoSuchAlgorithmException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
             return "";
         }

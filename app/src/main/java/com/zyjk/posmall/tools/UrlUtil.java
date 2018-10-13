@@ -10,7 +10,8 @@ import android.provider.MediaStore;
 import android.support.v4.content.CursorLoader;
 
 /**
- * Created by Administrator on 2018/9/3.
+ * Created by Sword God on 2018/9/3.
+ * Url工具类
  */
 
 public class UrlUtil {
