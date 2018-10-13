@@ -21,7 +21,6 @@
             android:id="@+id/presentList_xrv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/size20"
             android:background="@color/color_white" />
 
         <com.zyjk.posmall.page.LoadPage

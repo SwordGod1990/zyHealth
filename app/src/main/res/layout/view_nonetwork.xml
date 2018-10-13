@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--无网络-->
+<?xml version="1.0" encoding="utf-8"?><!--无网络-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,7 +21,7 @@
             android:id="@+id/noNetwork_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/noNetwork_load_fail" />
+            android:text="@string/noNetwork" />
     </LinearLayout>
 
 

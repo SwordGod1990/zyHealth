@@ -28,7 +28,7 @@ public class CommonFragmentActivity extends BasePageActivity {
     public static final int FRAGMENT_FORGOT_PWD = 3;   //忘记密码
     public static final int FRAGMENT_SCAVENGERS = 5;   //扫码购药
     public static final int FRAGMENT_DISCOUNT_DETAILS = 6;          //折扣性情
-    public static final int FRAGMENT_GIFT_DETAILS = 7;              //满赠详情
+    public static final int FRAGMENT_PRESENT_DETAILS = 7;              //满赠详情
     public static final int FRAGMENT_CONFIRM_PURCHASE = 8;          //确认采购
     public static final int FRAGMENT_ORDER_SUCCESS = 9;             //采购成功
     public static final int FRAGMENT_PAY_ORDER_DETAILS = 10;        //待支付
@@ -68,7 +68,7 @@ public class CommonFragmentActivity extends BasePageActivity {
                 //折扣详情
                 fragment = new DiscountDetailsFragment();
                 break;
-            case FRAGMENT_GIFT_DETAILS:
+            case FRAGMENT_PRESENT_DETAILS:
                 //满赠详情
                 fragment = new PresentDetailsFragment();
                 break;

@@ -22,8 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/color_EFEFF4"
-            android:paddingLeft="@dimen/size30"
-            android:paddingRight="@dimen/size30" />
+            android:paddingLeft="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_15" />
 
         <com.zyjk.posmall.page.LoadPage
             android:id="@+id/mLoadPage"
@@ -35,7 +35,7 @@
     <LinearLayout
         android:id="@+id/orderList_ll"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="@dimen/dp_54"
         android:layout_alignParentBottom="true"
         android:background="@android:color/white"
         android:orientation="horizontal">
@@ -46,29 +46,29 @@
 
             <RelativeLayout
                 android:id="@+id/orderList_num_rl"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp">
+                android:layout_marginStart="@dimen/dp_15">
 
                 <ImageView
                     android:id="@+id/orderList_icon_iv"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
                     android:layout_centerVertical="true"
                     android:src="@drawable/bill" />
 
                 <TextView
                     android:id="@+id/orderList_num_tv"
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:background="@drawable/red_bg_num"
                     android:gravity="center"
-                    android:text="0"
+                    android:text="@string/num_0"
                     android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/sp_12" />
             </RelativeLayout>
 
             <TextView
@@ -76,22 +76,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/orderList_num_rl"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/orderList_num_rl"
                 android:text="￥0.0元"
                 android:textColor="@color/colorAccent"
-                android:textSize="16sp" />
+                android:textSize="@dimen/sp_16" />
 
             <TextView
                 android:id="@+id/orderList_submit_tv"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/dp_100"
                 android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@color/color_EB3E2D"
                 android:gravity="center"
-                android:padding="10dp"
-                android:text="去结算"
+                android:padding="@dimen/dp_10"
+                android:text="@string/toSettle"
                 android:textColor="@color/color_white" />
         </RelativeLayout>
     </LinearLayout>
@@ -99,17 +99,17 @@
     <RelativeLayout
         android:id="@+id/orderList_rl"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size108"
+        android:layout_height="@dimen/dp_108"
         android:layout_alignParentBottom="true"
         android:background="@color/color_white"
         android:visibility="gone">
 
         <RelativeLayout
             android:id="@+id/orderList_sweep_rl"
-            android:layout_width="@dimen/size280"
-            android:layout_height="@dimen/size80"
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="@dimen/dp_80"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/size68"
+            android:layout_marginStart="@dimen/dp_68"
             android:background="@drawable/white_bg_sign"
             android:gravity="center_vertical">
 
@@ -118,9 +118,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/aty_scavengers_sweep"
+                android:text="@string/sweep"
                 android:textColor="@color/color_EB3E2D"
-                android:textSize="@dimen/txt18" />
+                android:textSize="@dimen/sp_18" />
 
             <TextView
                 android:id="@+id/orderList_pc_tv"
@@ -128,19 +128,19 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/orderList_sweep_tv"
                 android:layout_centerHorizontal="true"
-                android:text="@string/aty_scavengers_pc"
+                android:text="@string/orderList"
                 android:textColor="@color/color_FF6C07"
-                android:textSize="@dimen/txt10" />
+                android:textSize="@dimen/sp_10" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/orderList_purchase_rl"
-            android:layout_width="@dimen/size280"
-            android:layout_height="@dimen/size80"
-            android:layout_alignParentRight="true"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/size68"
-            android:background="@drawable/public_discount_red"
+            android:layout_marginEnd="@dimen/dp_34"
+            android:background="@drawable/red_public_discount"
             android:gravity="center_vertical">
 
             <TextView
@@ -148,9 +148,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/aty_scavengers_purchase"
+                android:text="@string/immediateProcurement"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/txt18" />
+                android:textSize="@dimen/sp_18" />
         </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="" />
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="50dp"
@@ -67,8 +71,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/size10"
-            android:layout_marginTop="@dimen/size10"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/dog"
             app:riv_border_color="@color/color_red"
             app:riv_border_width="2dp"
@@ -82,8 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/size10"
-            android:layout_toRightOf="@+id/fragment_oneself_photo_select"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/fragment_oneself_photo_select"
             android:text="驴得水" />
     </RelativeLayout>
 </LinearLayout>

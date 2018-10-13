@@ -22,7 +22,7 @@ import com.stx.xhb.xbanner.XBanner;
 import com.stx.xhb.xbanner.transformers.Transformer;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.adapter.HomeDiscountAdapter;
-import com.zyjk.posmall.adapter.HomeFullGiftAdapter;
+import com.zyjk.posmall.adapter.HomePresentAdapter;
 import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.ui.activity.DiscountListActivity;
 import com.zyjk.posmall.ui.activity.PresentListActivity;
@@ -107,7 +107,7 @@ public class TabHomeFragment extends BasePageFragment {
         HomeDiscountAdapter discountAdapter = new HomeDiscountAdapter(getContext(), R.layout.item_goodsenquiry_discount, list);
         mDiscount_rv.setAdapter(discountAdapter);
         //设置满赠Adapter
-        HomeFullGiftAdapter giftAdapter = new HomeFullGiftAdapter(getContext(), R.layout.item_goodsenquiry_gift, list);
+        HomePresentAdapter giftAdapter = new HomePresentAdapter(getContext(), R.layout.item_goodsenquiry_present, list);
         mGift_rv.setAdapter(giftAdapter);
     }
 

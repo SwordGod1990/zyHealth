@@ -89,10 +89,10 @@ public class TabOrderFragment extends BasePageFragment implements TabLayout.OnTa
 
     @Override
     public void initData() {
-        tabs.add(new TabModel("0", "全部", R.drawable.tab_all_drawable));
-        tabs.add(new TabModel("1", "待支付", R.drawable.tab_pay_drawable));
-        tabs.add(new TabModel("2", "待发货", R.drawable.tab_send_drawable));
-        tabs.add(new TabModel("3", "待收货", R.drawable.tab_receive_drawable));
+        tabs.add(new TabModel("0", "全部", R.drawable.tab_drawable_all));
+        tabs.add(new TabModel("1", "待支付", R.drawable.tab_drawable_pay));
+        tabs.add(new TabModel("2", "待发货", R.drawable.tab_drawable_send));
+        tabs.add(new TabModel("3", "待收货", R.drawable.tab_drawable_receive));
         for (TabModel tab : tabs) {
             mTabLayout.addTab(mTabLayout.newTab().setText(tab.title).setIcon(tab.img));
         }

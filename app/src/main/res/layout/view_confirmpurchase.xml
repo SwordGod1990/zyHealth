@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--返回状态-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/view_confirmPurchase_rl"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size100"
+    android:layout_height="@dimen/dp_50"
     android:background="@drawable/rectangle_btn">
 
     <ImageView
@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/size34"
+        android:layout_marginStart="@dimen/dp_17"
         android:src="@drawable/cancel"
         android:visibility="gone" />
 
@@ -19,11 +19,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/size10"
-        android:layout_toRightOf="@+id/view_confirmPurchase_cancel_iv"
-        android:text="@string/confirmPurchase_state_cancel"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_toEndOf="@+id/view_confirmPurchase_cancel_iv"
+        android:text="@string/alreadyCancel"
         android:textColor="@color/color_white"
-        android:textSize="@dimen/txt18"
+        android:textSize="@dimen/sp_18"
         android:visibility="gone" />
 
     <ImageView
@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/size34"
+        android:layout_marginStart="@dimen/dp_17"
         android:src="@drawable/reject" />
 
     <TextView
@@ -39,9 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/size10"
-        android:layout_toRightOf="@+id/view_confirmPurchase_reject_iv"
-        android:text="@string/confirmPurchase_state_cancel"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_toEndOf="@+id/view_confirmPurchase_reject_iv"
+        android:text="@string/alreadyReject"
         android:textColor="@color/color_white"
-        android:textSize="@dimen/txt18" />
+        android:textSize="@dimen/sp_18" />
 </RelativeLayout>

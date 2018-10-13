@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.aspsine.irecyclerview.IRecyclerView;
 import com.orhanobut.logger.Logger;
 import com.zyjk.posmall.R;
 import com.zyjk.posmall.adapter.SendAdapter;
@@ -13,7 +12,6 @@ import com.zyjk.posmall.base.BasePageFragment;
 import com.zyjk.posmall.view.MyScrollview;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -25,7 +23,7 @@ import butterknife.OnClick;
 
 public class Send_OrderDetailsFragment extends BasePageFragment {
 
-    private ArrayList<String> list;
+    private ArrayList<String> list = new ArrayList<>();
     @BindView(R.id.orderDetails_myScrollview)
     MyScrollview mScrollView;
     @BindView(R.id.frg_send_RecyclerView)
@@ -58,8 +56,8 @@ public class Send_OrderDetailsFragment extends BasePageFragment {
     @Override
     public void initData() {
         list = new ArrayList<>();
-        for (int i = 'A'; i < 'Z'; i++) {
-            list.add("" + (char) i);
+        for (int i = 0; i < 15; i++) {
+            list.add("大连药业股份有限公司" + i);
         }
         Logger.d(list);
     }

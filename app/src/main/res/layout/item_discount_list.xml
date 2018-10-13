@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_centerVertical="true"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
 
     <RelativeLayout
         android:id="@+id/item_discountList_rl"
-        android:layout_width="@dimen/size132"
-        android:layout_height="@dimen/size132"
+        android:layout_width="@dimen/dp_66"
+        android:layout_height="@dimen/dp_66"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/size32"
-        android:layout_marginRight="@dimen/size20">
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_16">
 
         <ImageView
             android:id="@+id/item_discountList_icon_iv"
@@ -24,52 +24,52 @@
         android:id="@+id/item_discountList_name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size30"
-        android:layout_toRightOf="@+id/item_discountList_rl"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_toEndOf="@+id/item_discountList_rl"
         android:text="(倍他乐克)酒石酸美托洛尔片..."
         android:textColor="@color/color_1A1A1A"
-        android:textSize="@dimen/txt18" />
+        android:textSize="@dimen/sp_18" />
 
     <RelativeLayout
         android:id="@+id/item_discountList_gift_rl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_discountList_name_tv"
-        android:layout_marginTop="@dimen/size16"
-        android:layout_toRightOf="@+id/item_discountList_rl">
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_toEndOf="@+id/item_discountList_rl">
 
         <TextView
             android:id="@+id/item_discountList_sign01"
-            android:layout_width="@dimen/size72"
-            android:layout_height="@dimen/size30"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/white_bg_sign"
             android:gravity="center"
-            android:text="赠品"
+            android:text="@string/gift"
             android:textColor="@color/color_EB3E2D"
-            android:textSize="@dimen/txt10" />
+            android:textSize="@dimen/sp_10" />
 
         <TextView
             android:id="@+id/item_discountList_giftName_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/size6"
-            android:layout_toRightOf="@+id/item_discountList_sign01"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_toEndOf="@+id/item_discountList_sign01"
             android:text="阿莫西林胶囊..."
             android:textColor="@color/color_666"
-            android:textSize="@dimen/txt13" />
+            android:textSize="@dimen/sp_13" />
 
         <TextView
             android:id="@+id/item_discountList_giftNum_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/size28"
+            android:layout_marginEnd="@dimen/dp_14"
             android:src="@drawable/right"
             android:text="x1"
             android:textColor="@color/color_666"
-            android:textSize="@dimen/txt13" />
+            android:textSize="@dimen/sp_13" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -77,29 +77,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_discountList_gift_rl"
-        android:layout_marginTop="@dimen/size10"
-        android:layout_toRightOf="@+id/item_discountList_rl">
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_toEndOf="@+id/item_discountList_rl">
 
         <TextView
             android:id="@+id/item_discountList_sign02"
-            android:layout_width="@dimen/size72"
-            android:layout_height="@dimen/size30"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_15"
             android:layout_centerVertical="true"
             android:background="@drawable/white_bg_sign"
             android:gravity="center"
-            android:text="条件"
+            android:text="@string/condition"
             android:textColor="@color/color_EB3E2D"
-            android:textSize="@dimen/txt10" />
+            android:textSize="@dimen/sp_10" />
 
         <TextView
             android:id="@+id/item_discountList_condName_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/size6"
-            android:layout_toRightOf="@+id/item_discountList_sign02"
+            android:layout_marginStart="@dimen/dp_3"
+            android:layout_toEndOf="@+id/item_discountList_sign02"
             android:text="「满20盒赠送」"
             android:textColor="@color/color_666"
-            android:textSize="@dimen/txt13" />
+            android:textSize="@dimen/sp_13" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -107,47 +107,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_discountList_cond_rl"
-        android:layout_toRightOf="@+id/item_discountList_rl">
+        android:layout_toEndOf="@+id/item_discountList_rl">
 
         <TextView
             android:id="@+id/item_discountList_moneySgin_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/item_discountList_money_tv"
-            android:text="￥"
+            android:text="@string/moneySign"
             android:textColor="@color/color_EB3E2D"
-            android:textSize="@dimen/txt13" />
+            android:textSize="@dimen/sp_13" />
 
         <TextView
             android:id="@+id/item_discountList_money_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/item_discountList_moneySgin_tv"
+            android:layout_toEndOf="@+id/item_discountList_moneySgin_tv"
             android:text="36.56"
             android:textColor="@color/color_EB3E2D"
-            android:textSize="@dimen/txt20" />
+            android:textSize="@dimen/sp_20" />
 
         <RelativeLayout
             android:id="@+id/item_discountList_addCar_rl"
-            android:layout_width="@dimen/size300"
-            android:layout_height="@dimen/size100"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:paddingRight="@dimen/size32">
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_50"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
 
             <ImageView
                 android:id="@+id/item_discountList_addCar_btn"
-                android:layout_width="@dimen/size42"
-                android:layout_height="@dimen/size42"
-                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_21"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_16"
                 android:src="@drawable/car" />
         </RelativeLayout>
     </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size2"
+        android:layout_height="@dimen/dp_1"
         android:layout_below="@+id/item_discountList_money_rl"
-        android:layout_marginLeft="@dimen/size186"
+        android:layout_marginStart="@dimen/dp_93"
         android:background="@color/color_E5E5E5" />
 </RelativeLayout>

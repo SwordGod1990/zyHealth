@@ -15,49 +15,49 @@
         <Button
             android:id="@+id/window_circlePhoto_beatPhoto"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size100"
-            android:background="@drawable/dialog_bg_white"
+            android:layout_height="@dimen/dp_50"
+            android:background="@drawable/white_bg_dialog"
             android:gravity="center"
-            android:text="拍照"
+            android:text="@string/patPhoto"
             android:textColor="@color/color_333" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size0.5"
+            android:layout_height="@dimen/dp_1"
             android:background="@color/color_999" />
 
         <Button
             android:id="@+id/window_circlePhoto_selectPhoto"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size100"
+            android:layout_height="@dimen/dp_50"
             android:background="@color/color_ccc"
             android:gravity="center"
-            android:text="从相册中选择"
+            android:text="@string/choosePhoto"
             android:textColor="@color/color_333" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size0.5"
+            android:layout_height="@dimen/dp_1"
             android:background="@color/color_999" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size0.5"
-            android:layout_marginTop="@dimen/size10"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_5"
             android:background="@color/color_999" />
 
         <Button
             android:id="@+id/window_circlePhoto_cancel"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size100"
+            android:layout_height="@dimen/dp_50"
             android:background="@color/color_ccc"
             android:gravity="center"
-            android:text="取消"
+            android:text="@string/cancel"
             android:textColor="@color/color_333" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size1"
+            android:layout_height="@dimen/dp_1"
             android:background="@color/color_999" />
     </LinearLayout>
 </RelativeLayout>

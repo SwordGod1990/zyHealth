@@ -21,9 +21,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="44dp"
+            android:layout_marginBottom="@dimen/dp_44"
             android:background="@drawable/white_bg_sign"
-            android:text="立即体验"
+            android:text="@string/immediateExperience"
             android:textColor="@color/color_EB3E2D" />
     </RelativeLayout>
 
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="@dimen/dp_25"
             android:gravity="center"
             android:orientation="horizontal" />
     </RelativeLayout>

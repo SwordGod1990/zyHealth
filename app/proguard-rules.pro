@@ -35,4 +35,5 @@
 
 -keep class com.unionpay.mobile.android.*{*;}
 -keepattributes EnclosingMethod
-
+#所有model类不要混淆
+-keep class package.*.model.**{*;}

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!--主页-->
+<?xml version="1.0" encoding="utf-8"?><!--切换主页-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,20 +7,20 @@
     <FrameLayout
         android:id="@+id/container_fl"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dp_0"
         android:layout_weight="1">
 
     </FrameLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/size1"
+        android:layout_height="@dimen/dp_1"
         android:background="@color/color_E5E5E5" />
 
     <com.zyjk.posmall.view.BottomBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
+        android:layout_height="@dimen/dp_46"
         android:layout_gravity="bottom"
         android:background="@color/color_white" />
 </LinearLayout>

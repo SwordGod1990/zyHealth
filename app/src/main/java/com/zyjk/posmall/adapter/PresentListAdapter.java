@@ -43,7 +43,7 @@ public class PresentListAdapter extends CommonAdapter<String> {
             @Override
             public void onClick(View v) {
                 //跳转到满赠详情页
-                CommonUtils.startAct(context, CommonFragmentActivity.FRAGMENT_GIFT_DETAILS);
+                CommonUtils.startAct(context, CommonFragmentActivity.FRAGMENT_PRESENT_DETAILS);
             }
         });
 

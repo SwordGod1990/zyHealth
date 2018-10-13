@@ -37,4 +37,5 @@
     <color name="color_FAFAFA">#FAFAFA</color>
     <color name="color_FF583E">#FF583E</color>
     <color name="color_808080">#808080</color>
+    <color name="color_000">#00000000</color>
 </resources>

@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/view_titlebar" />
+    <com.zyjk.posmall.view.TitleBar
+        android:id="@+id/mTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,8 +21,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/size10"
-            android:layout_marginTop="@dimen/size10"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
             android:src="@drawable/dog"
             app:riv_border_color="@color/color_red"
             app:riv_border_width="2dp"
@@ -32,8 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/size10"
-            android:layout_toRightOf="@+id/fragment_user_headPhoto_riv"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_toEndOf="@+id/fragment_user_headPhoto_riv"
             android:text="驴得水" />
     </RelativeLayout>
 

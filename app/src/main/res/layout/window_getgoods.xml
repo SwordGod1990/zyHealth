@@ -7,8 +7,8 @@
 
     <LinearLayout
         android:id="@+id/window_getGoods_ll"
-        android:layout_width="@dimen/size540"
-        android:layout_height="@dimen/size288"
+        android:layout_width="@dimen/dp_270"
+        android:layout_height="@dimen/dp_144"
         android:background="@drawable/white_ppw_replace"
         android:orientation="vertical">
 
@@ -17,13 +17,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="@string/window_getGoods"
+            android:text="@string/confirmGoods"
             android:textColor="@color/color_1A1A1A"
-            android:textSize="@dimen/txt17" />
+            android:textSize="@dimen/sp_17" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size1"
+            android:layout_height="@dimen/dp_1"
             android:background="@color/color_E5E5E5" />
 
         <LinearLayout
@@ -38,12 +38,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/window_cancel"
+                android:text="@string/cancel"
                 android:textColor="@color/color_1A1A1A"
-                android:textSize="@dimen/txt17" />
+                android:textSize="@dimen/sp_17" />
 
             <TextView
-                android:layout_width="@dimen/size1"
+                android:layout_width="@dimen/dp_1"
                 android:layout_height="match_parent"
                 android:background="@color/color_E5E5E5" />
 
@@ -53,9 +53,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/window_confirm"
+                android:text="@string/confirm"
                 android:textColor="@color/color_EB3E2D"
-                android:textSize="@dimen/txt17" />
+                android:textSize="@dimen/sp_17" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

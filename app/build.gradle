@@ -4,6 +4,7 @@ apply plugin: 'com.android.application'
 def releaseTime() {
     return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
 }
+
 android {
     signingConfigs {
         debug {
@@ -158,5 +159,6 @@ dependencies {
     compile 'com.github.Aspsine:IRecyclerView:0.0.7'
     //
     compile 'com.orhanobut:logger:1.15'
-
+    //弹窗
+    compile 'com.github.fingerth:customprogressdialog:1.1.0'
 }
